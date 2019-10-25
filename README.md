@@ -1,4 +1,4 @@
-# Propgramming in Python Course Materials
+# Programming in Python Course Materials
 
 ## Dependencies and Installation
 The materials are intended to be run from Jupyter Notebooks within the Anaconda package.
