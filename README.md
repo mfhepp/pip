@@ -35,7 +35,6 @@ Set your browser to full-screen mode.
 ### Generate PDFs ###
 First, you need to fetch the session ID for you running Jupyer Notebooks process. This can be found in the terminal window in which it is running. Find this section:<br />
 
-
 <code>
     To access the notebook, open this file in a browser:<br />
         file:///Users/...<br />
