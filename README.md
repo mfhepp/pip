@@ -5,28 +5,37 @@ The materials are intended to be run from Jupyter Notebooks within the Anaconda 
 
 You need the following components
 - RISE (https://rise.readthedocs.io/en/maint-5.5/)
-`$ conda install -c conda-forge rise`
+
+<br />`$ conda install -c conda-forge rise`
 
 - NBextensions with Table of Contents (2), Split Columns, RISE installed an enabled
-`$ conda install -c conda-forge jupyter_contrib_nbextensions`
+
+<br />`$ conda install -c conda-forge jupyter_contrib_nbextensions`
 
 - decktape for creating PDFs (https://github.com/astefanutti/decktape)
+
 If you do not have npm, install that first with Homebrew:
-`$ brew install node # install npm`
+
+<br />`$ brew install node # install npm`<br />
+
 Then install decktape
-`$ npm install -g decktape`
-`$ decktape`
+
+<br />`$ npm install -g decktape`
+<br />`$ decktape`
 
 ## Usage
 First make sure that the Table of Contents (2), Split Columns and RISE checkboxes are activated in the NBextensions pane. In Jupyter Notebooks, go to
-`Edit -> nbextensions config`
+
+<br />`Edit -> nbextensions config`
 
 ### Presentation Mode ###
 In order to present the slides, simply click on the RISE icon (tiny barchart) inm Jupyter Notebooks.
 Set your browser to full-screen mode.
 
 ### Generate PDFs ###
-First, you need to fetch the session ID for you running Jupyer Notebooks process. This can be found in the terminal window in which it is running. Find this section:
+First, you need to fetch the session ID for you running Jupyer Notebooks process. This can be found in the terminal window in which it is running. Find this section:<br />
+
+
 <code>
     To access the notebook, open this file in a browser:
         file:///Users/...
@@ -36,5 +45,5 @@ First, you need to fetch the session ID for you running Jupyer Notebooks process
 
 Then, generate a PDF using
 
-`$ decktape rise <URI_of_your_presentation>?token=<token_from above> <filename.pdf`
+<br />`$ decktape rise <URI_of_your_presentation>?token=<token_from above> <filename.pdf>`
 
