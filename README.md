@@ -28,11 +28,11 @@ First make sure that the Table of Contents (2), Split Columns and RISE checkboxe
 
 `Edit -> nbextensions config`
 
-### Presentation Mode ###
+### Presentation Mode
 In order to present the slides, simply click on the RISE icon (tiny barchart) inm Jupyter Notebooks.
 Set your browser to full-screen mode.
 
-### Generate PDFs ###
+### Generate PDFs
 First, you need to fetch the session ID for you running Jupyer Notebooks process. This can be found in the terminal window in which it is running. Find this section:<br />
 
 <pre>
@@ -46,3 +46,24 @@ Then, generate a PDF using
 
 `$ decktape rise <URI_of_your_presentation>?token=<token_from above> <filename.pdf>`
 
+**Note:** This sometimes fails for unknown reasons. To be investigated.
+
+## RISE Meta-data
+I currently use the following settings in the notebook's meta-data:
+<code>
+	"rise": {
+    "backimage": "background.png",
+    "center": false,
+    "enable_chalkboard": false,
+    "footer": "Univ.-Prof. Dr. Martin Hepp, martin.hepp@unibw.de",
+    "header": "Programmierung in Python",
+    "showSlideNumber": "pdf",
+    "slideNumber": "c/t",
+    "theme": "chesterish",
+    "transition": "none"
+  }
+ </code>
+
+## Open Issues ##
+- The slide numbers do not show in the PDF version of the slides.
+- I am still looking for a way to generate HTML-only versions of the presentations that preserve the reveal.js features. The standard output with `jupyter-nbconvert` or the respective menu option in Jupyter notebook is incomplete and breaks over some markup for reveal.js.
