@@ -1,0 +1,50 @@
+div#rise-header {
+	font-size: 24px;
+	font-weight: bold;
+  	padding-top: 4px;
+  	padding-left: 30px;	
+}
+
+div#rise-footer {
+	font-size: 24px;
+	font-weight: bold;
+  	padding-bottom: 24px;
+  	padding-left: 30px;	
+  }
+
+  /* ---------- markdown cells
+ */
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+	padding-top: 0;
+	margin-top: 0;
+	margin-bottom: 8px;
+	line-height: 100%;
+
+}
+
+body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
+     line-height: 110%;
+}
+
+.rendered_html h1:first-child {
+    margin-top: 0em;
+}
+
+.rendered_html h2:first-child {
+    margin-top: 0em;
+}
+
+.rendered_html h3:first-child {
+    margin-top: 0em;
+}
+
+.rendered_html h4:first-child {
+    margin-top: 0em;
+}
+
+.rendered_html h5:first-child {
+    margin-top: 0em;
+}
+
+
