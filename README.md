@@ -67,3 +67,4 @@ I currently use the following settings in the notebook's meta-data:
 ## Open Issues ##
 - The slide numbers do not show in the PDF version of the slides.
 - I am still looking for a way to generate HTML-only versions of the presentations that preserve the reveal.js features. The standard output with `jupyter-nbconvert` or the respective menu option in Jupyter notebook is incomplete and breaks over some markup for reveal.js.
+- I would like to include the date of creation as a version signature to the footer of PDF versions, but I have not yet figured out how. Using an f-String as the value for the `"rise: {"header": ...}` value might work, but where will I put the datetime import?
