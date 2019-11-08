@@ -13123,7 +13123,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {}, "toc_section_display": true, "toc_window_display": false};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Inhaltsverzeichnis", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "512px"}, "toc_section_display": true, "toc_window_display": false};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13140,7 +13140,9 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München
 <br /><br /></p>
-<h2 id="Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">Einheit 2: Kontrollflussstrukturen und Algorithmik <span class="tocSkip" /><a class="anchor-link" href="#Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">&#182;</a></h2><p><strong>Version: 2019-11-08</strong></p>
+<h2 id="Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">Einheit 2: Kontrollflussstrukturen und Algorithmik <span class="tocSkip" /><a class="anchor-link" href="#Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">&#182;</a></h2><p><strong>Version: 2019-11-08</strong>
+<br /><br />
+<a href="http://www.ebusiness-unibw.org/wiki/Teaching/PIP"><strong>http://www.ebusiness-unibw.org/wiki/Teaching/PIP</strong></a></p>
 
 </div>
 </div>
@@ -13932,6 +13934,67 @@ Das Beispiel von oben sähe dann so aus:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Ausf&#252;hrung-von-Anweisungen,-wenn-die-Schleife-ohne-break-beendet-wurde">Ausf&#252;hrung von Anweisungen, wenn die Schleife ohne <code>break</code> beendet wurde<a class="anchor-link" href="#Ausf&#252;hrung-von-Anweisungen,-wenn-die-Schleife-ohne-break-beendet-wurde">&#182;</a></h3><p>Manchmal ist es nützlich, wenn man Anweisungen nur dann ausführt, wenn eine <code>while</code>-Schleife regulär beendet wurde, also nicht über eine <code>break</code>-Anweisung verlassen wird. Dazu dient das Schlüsselwort <code>else</code>, das <strong>auf der selben Einrückungsebene wie der <code>while</code>-Befehl stehen muss.</strong></p>
+<p>Eine typische Anwendung ist eine Meldung bei einem erfolglosen Versuch:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Beispiel für <code>else</code> am Ende einer <code>while</code>-Schleife:</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">antwort</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1">## nur ein Dummy</span>
+
+<span class="n">versuche</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">versuche</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo, bitte melde Dich!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">antwort</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># Jemand hat sich gemeldet</span>
+        <span class="k">break</span>
+    <span class="n">versuche</span> <span class="o">=</span> <span class="n">versuche</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Abbruch - keine Antwort.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hallo, bitte melde Dich!
+Hallo, bitte melde Dich!
+Hallo, bitte melde Dich!
+Abbruch - keine Antwort.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Verzweigungen">Verzweigungen<a class="anchor-link" href="#Verzweigungen">&#182;</a></h1>
 </div>
 </div>
@@ -14394,6 +14457,14 @@ $ 0 &lt; x &lt; 10 $</p>
 <li>Für die Rundung bei der Ausgabe gibt es spezielle Mechanismen, die hier aber nicht behandelt werden.</li>
 <li>Man muss festlegen, ob die Gebühr nach oder vor der Zinsgutschrift für den letzten Monat eines Jahres erfolgen soll.</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quellenangaben-und-weiterf&#252;hrende-Literatur">Quellenangaben und weiterf&#252;hrende Literatur<a class="anchor-link" href="#Quellenangaben-und-weiterf&#252;hrende-Literatur">&#182;</a></h1><p>[Pyt2019]&nbsp;&nbsp;&nbsp;&nbsp;Python Software Foundation. Python 3.8.0 Documentation. <a href="https://docs.python.org/3/">https://docs.python.org/3/</a>.</p>
 
 </div>
 </div>
