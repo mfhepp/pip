@@ -13244,7 +13244,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München
 <br /><br /></p>
-<h2 id="Einheit-1:-Erste-Schritte-in-Python-">Einheit 1: Erste Schritte in Python <span class="tocSkip" /><a class="anchor-link" href="#Einheit-1:-Erste-Schritte-in-Python-">&#182;</a></h2><p><strong>Version: 2019-11-06</strong></p>
+<h2 id="Einheit-1:-Erste-Schritte-in-Python-">Einheit 1: Erste Schritte in Python <span class="tocSkip" /><a class="anchor-link" href="#Einheit-1:-Erste-Schritte-in-Python-">&#182;</a></h2><p><strong>Version: 2019-11-08</strong></p>
 
 </div>
 </div>
@@ -13365,6 +13365,81 @@ break               for                 not
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">builtins</span><span class="p">))</span>
+<span class="n">seq</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">max_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">))</span>
+<span class="n">chunks</span> <span class="o">=</span> <span class="p">[</span><span class="n">seq</span><span class="p">[</span><span class="n">pos</span><span class="p">:</span><span class="n">pos</span> <span class="o">+</span> <span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">item</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">max_len</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">chunk</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ArithmeticError           AssertionError            AttributeError            BaseException             
+BlockingIOError           BrokenPipeError           BufferError               BytesWarning              
+ChildProcessError         ConnectionAbortedError    ConnectionError           ConnectionRefusedError    
+ConnectionResetError      DeprecationWarning        EOFError                  Ellipsis                  
+EnvironmentError          Exception                 False                     FileExistsError           
+FileNotFoundError         FloatingPointError        FutureWarning             GeneratorExit             
+IOError                   ImportError               ImportWarning             IndentationError          
+IndexError                InterruptedError          IsADirectoryError         KeyError                  
+KeyboardInterrupt         LookupError               MemoryError               ModuleNotFoundError       
+NameError                 None                      NotADirectoryError        NotImplemented            
+NotImplementedError       OSError                   OverflowError             PendingDeprecationWarning 
+PermissionError           ProcessLookupError        RecursionError            ReferenceError            
+ResourceWarning           RuntimeError              RuntimeWarning            StopAsyncIteration        
+StopIteration             SyntaxError               SyntaxWarning             SystemError               
+SystemExit                TabError                  TimeoutError              True                      
+TypeError                 UnboundLocalError         UnicodeDecodeError        UnicodeEncodeError        
+UnicodeError              UnicodeTranslateError     UnicodeWarning            UserWarning               
+ValueError                Warning                   ZeroDivisionError         __IPYTHON__               
+__build_class__           __debug__                 __doc__                   __import__                
+__loader__                __name__                  __package__               __spec__                  
+abs                       all                       any                       ascii                     
+bin                       bool                      breakpoint                bytearray                 
+bytes                     callable                  chr                       classmethod               
+compile                   complex                   copyright                 credits                   
+delattr                   dict                      dir                       display                   
+divmod                    enumerate                 eval                      exec                      
+filter                    float                     format                    frozenset                 
+get_ipython               getattr                   globals                   hasattr                   
+hash                      help                      hex                       id                        
+input                     int                       isinstance                issubclass                
+iter                      len                       license                   list                      
+locals                    map                       max                       memoryview                
+min                       next                      object                    oct                       
+open                      ord                       pow                       print                     
+property                  range                     repr                      reversed                  
+round                     set                       setattr                   slice                     
+sorted                    staticmethod              str                       sum                       
+super                     tuple                     type                      vars                      
+zip                       
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13856,7 +13931,7 @@ FH
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hier wird jeweils nicht Variable mit einem neuen Wert überschrieben, sondern der neue Wert als neues Objekt erzeugt und der Name mit der Adresse des neuen Objektes verbunden.</p>
+<p>Hier wird jeweils nicht die Variable mit einem neuen <strong>Wert</strong> überschrieben, sondern der neue Wert als neues Objekt erzeugt und die Variable (der Name) <strong>mit der Adresse des neuen Objektes verbunden.</strong></p>
 
 </div>
 </div>
@@ -13953,7 +14028,7 @@ sind die häufigsten Arten von Objekten in den meisten Programmen.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Ganze-Zahlen">Ganze Zahlen<a class="anchor-link" href="#Ganze-Zahlen">&#182;</a></h4><p>Ganze Zahlen werden in Python durch den Datentyp <code>int</code>repräsentiert und können beliebig große Werte annehmen (vgl. <a href="https://docs.python.org/3/library/stdtypes.html#typesnumeric">Numeric Types — int, float, complex</a>).</p>
+<h4 id="Ganze-Zahlen">Ganze Zahlen<a class="anchor-link" href="#Ganze-Zahlen">&#182;</a></h4><p>Ganze Zahlen werden in Python durch den Datentyp <code>int</code> repräsentiert und können beliebig große Werte annehmen (vgl. <a href="https://docs.python.org/3/library/stdtypes.html#typesnumeric">Numeric Types — int, float, complex</a>).</p>
 
 </div>
 </div>
@@ -14110,7 +14185,7 @@ sind die häufigsten Arten von Objekten in den meisten Programmen.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Man muss dazu wissen, dass Python in den neueren Versionen versucht, die Beschränkungen von Gleitkommazahlen bei der Ausgabe durch geschickte Rundungsregeln zu verbergern. So wird $1/3$ intern als eine Gleitkommazahl mit einer begrenzten Anzahl an Stellen gespeichert.</p>
+<p>Man muss dazu wissen, dass Python in den neueren Versionen versucht, die Beschränkungen von Gleitkommazahlen bei der Ausgabe durch geschickte Rundungsregeln zu verbergen. So wird $1/3$ intern als eine Gleitkommazahl mit einer begrenzten Anzahl an Stellen gespeichert.</p>
 <p>Zu den Beschränkungen und Fehlerquellen beim Rechnen mit Gleitkommazahlen vgl. <a href="https://docs.python.org/3/tutorial/floatingpoint.html">Floating Point Arithmetic: Issues and Limitations</a>.</p>
 
 </div>
@@ -14419,8 +14494,8 @@ Beispiele:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Wurzel">Wurzel<a class="anchor-link" href="#Wurzel">&#182;</a></h4><p>Direkt in Python gibt es keine Funktion für die Quadratwurzel, weil man dies einfach als Potenzfunktion mit einem Bruch als Exponenten ausdrücken kann:
-$\sqrt{x} = x^\frac{1}{2}$</p>
+<h4 id="Wurzel">Wurzel<a class="anchor-link" href="#Wurzel">&#182;</a></h4><p>Direkt in Python gibt es keine Funktion für die Quadratwurzel, weil man dies einfach als Potenzfunktion mit einem Bruch als Exponenten ausdrücken kann:</p>
+<p>$\sqrt{x} = x^\frac{1}{2}$</p>
 <p>$\sqrt[3]{x} = x^\frac{1}{3}$</p>
 
 </div>
@@ -14461,13 +14536,21 @@ $\sqrt{x} = x^\frac{1}{2}$</p>
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Es gibt auch ein spezielles Modul <code>math</code> mit zusätzlichen mathematischen Methoden.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Es gibt auch ein spezielles Modul math mit zusätzlichen mathematischen Methoden</span>
-<span class="kn">import</span> <span class="nn">math</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
 <span class="n">a</span> <span class="o">=</span> <span class="mi">16</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </pre></div>
@@ -14692,19 +14775,6 @@ $\sqrt{x} = x^\frac{1}{2}$</p>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14741,7 +14811,15 @@ $\sqrt{x} = x^\frac{1}{2}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Rundung">Rundung<a class="anchor-link" href="#Rundung">&#182;</a></h3><p>Mit der Funktion <code>round(&lt;wert&gt;, &lt;anzahl_stellen&gt;)</code> kann man mathematisch korrekt runden.</p>
+<h3 id="Rundung">Rundung<a class="anchor-link" href="#Rundung">&#182;</a></h3><p>Bei der Umwandlung einer Gleitkommazahl in eine Ganzzahl mit <code>int()</code>ist die Art der Rundung nicht eindeutig.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Runden-mit-round()">Runden mit <code>round()</code><a class="anchor-link" href="#Runden-mit-round()">&#182;</a></h4><p>Mit der Funktion <code>round(&lt;wert&gt;, &lt;anzahl_stellen&gt;)</code> kann man mathematisch korrekt runden.</p>
 <p>Wenn keine Stellenanzahl angegeben wird, wird auf die nächste ganze Zahl gerundet.</p>
 
 </div>
@@ -14820,6 +14898,96 @@ $\sqrt{x} = x^\frac{1}{2}$</p>
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Abrunden-mit-math.floor()">Abrunden mit <code>math.floor()</code><a class="anchor-link" href="#Abrunden-mit-math.floor()">&#182;</a></h4><p>Mit der Funktion <code>math.floor(&lt;wert&gt;)</code> kann auf die nächstkleinere ganze Zahl abgerundet werden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">zahl</span> <span class="o">=</span> <span class="mf">3.8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">zahl</span><span class="p">))</span>
+<span class="n">negative_zahl</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">negative_zahl</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+-4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Aufrunden-mit-math.ceil()">Aufrunden mit <code>math.ceil()</code><a class="anchor-link" href="#Aufrunden-mit-math.ceil()">&#182;</a></h4><p>Mit der Funktion <code>math.ceil(&lt;wert&gt;)</code> kann auf die nächstgrößere ganze Zahl aufgerundet werden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">zahl</span> <span class="o">=</span> <span class="mf">3.8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">zahl</span><span class="p">))</span>
+<span class="n">negative_zahl</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">negative_zahl</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4
+-3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15590,8 +15758,9 @@ True
 <ul>
 <li>Listen</li>
 <li>Dictionaries</li>
-<li>Tuples
-uvm.</li>
+<li>Tuples</li>
+<li>Mengen / Sets</li>
+<li>sonstige, auch benutzerdefinierte Objekte</li>
 </ul>
 
 </div>
@@ -16027,13 +16196,164 @@ Er sagte &#34;Hallo&#34;
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="f-Strings-(nicht-klausurrelevant)">f-Strings (nicht klausurrelevant)<a class="anchor-link" href="#f-Strings-(nicht-klausurrelevant)">&#182;</a></h5><p>Schon immer gab es in Python die Möglichkeit, Werte in eine Zeichenkette einzubetten und zu formatieren, damit man einen Ergebnisstring nicht aufwändig zusammenfügen muss.</p>
+<p>Seit der Version 3.6 existiert ein <a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings">deutlich verbesserter Mechanismus, der sich 'f-Strings'</a> nennt.</p>
+<p>Wenn man vor eine Zeichenkette den Buchstaben 'f' setzt, kann man innerhalb geschweifter Klammern beliebige Python-Ausdrücke einfügen:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Franz&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Hallo </span><span class="si">{name}</span><span class="s1">!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Der Umfang eines Kreises mit dem Radius r=2 ist {math.pi * 2}.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hallo Franz!
+Der Umfang eines Kreises mit dem Radius r=2 ist 6.283185307179586.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Formattierung-von-Werten-innerhalb-von-f-Strings-(nicht-klausurrelevant)">Formattierung von Werten innerhalb von f-Strings (nicht klausurrelevant)<span class="tocSkip" /><a class="anchor-link" href="#Formattierung-von-Werten-innerhalb-von-f-Strings-(nicht-klausurrelevant)">&#182;</a></h5><p>Man kann die Werte in der Ausgabe auch formattieren. Dazu setzt man hinter den Ausdruck einen Doppelpunkt und dann verschiedene Angaben, wie</p>
+<ul>
+<li>die gesamte Breite in Zeichen <strong>inklusive des Dezimaltrenners</strong> (Punkt oder Komma),</li>
+<li>die Anzahl Nachkommastellen,</li>
+<li>ob fehlende Stellen vor dem Dezimalpunkt mit Leerzeichen, Nullen oder einem anderen Zeichen aufgefüllt werden sollen, sowie</li>
+<li>den Datentyp (oft <code>f</code> für eine Gleitkommazahl).</li>
+</ul>
+<p><code>f'{&lt;wert&gt;:&lt;breite&gt;.&lt;nachkommastellen&gt;f}'</code></p>
+<p>Mit führender Null:</p>
+<p><code>f'{&lt;wert&gt;:0&lt;breite&gt;.&lt;nachkommastellen&gt;f}'</code></p>
+<p><a href="https://docs.python.org/3/library/string.html#formatspec">Link zur vollständigen Dokumentation der Formatierungsanweisungen</a>.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Beispiel-">Beispiel <span class="tocSkip" /><a class="anchor-link" href="#Beispiel-">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Pi ohne Nachkommastellen: </span><span class="si">{math.pi:.0f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Pi mit zwei Nachkommastellen: </span><span class="si">{math.pi:.2f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Pi mit vier Nachkommastellen: </span><span class="si">{math.pi:.4f}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pi ohne Nachkommastellen: 3
+Pi mit zwei Nachkommastellen: 3.14
+Pi mit vier Nachkommastellen: 3.1416
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Beispiel-">Beispiel <span class="tocSkip" /><a class="anchor-link" href="#Beispiel-">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.5678</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">345.7</span>
+<span class="c1"># Fünf Stellen Gesamtlänge, eine Nachkommastelle</span>
+<span class="c1"># Fehlende Stellen vor dem Wert werden mit Leerzeichen aufgefüllt.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Wert 1:</span><span class="si">{a:5.1f}</span><span class="s1"> Wert 2:</span><span class="si">{b:5.1f}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># Dito, aber Auffüllung mit Nullen</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Wert 1:</span><span class="si">{a:05.1f}</span><span class="s1"> Wert 2:</span><span class="si">{b:05.1f}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Wert 1:  3.6 Wert 2:345.7
+Wert 1:003.6 Wert 2:345.7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Weitere-Hilfsfunktionen-f&#252;r-Strings">Weitere Hilfsfunktionen f&#252;r Strings<a class="anchor-link" href="#Weitere-Hilfsfunktionen-f&#252;r-Strings">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># https://docs.python.org/3/library/stdtypes.html</span>
@@ -16045,8 +16365,9 @@ Er sagte &#34;Hallo&#34;
 <span class="n">text_2</span> <span class="o">=</span> <span class="s2">&quot;Der erste Satz. Und nun der zweite Satz.&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text_2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">))</span>
 
-<span class="n">text_3</span> <span class="o">=</span> <span class="s2">&quot; Hallo .&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">text_3</span><span class="o">.</span><span class="n">trim</span><span class="p">)</span>
+<span class="n">text_3</span> <span class="o">=</span> <span class="s2">&quot; = Hallo = &quot;</span>
+<span class="c1"># Whitespace (Leerzeichen etc.) links und rechts entfernen</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text_3</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> 
 </pre></div>
 
     </div>
@@ -16067,41 +16388,54 @@ Er sagte &#34;Hallo&#34;
 UNIBWM IST TOLL
 [&#39;UniBwM&#39;, &#39;ist&#39;, &#39;toll&#39;]
 [&#39;Der erste Satz&#39;, &#39; Und nun der zweite Satz&#39;, &#39;&#39;]
+= Hallo =
 </pre>
 </div>
 </div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>endswith()</code> und <code>startswith()</code> für Zeichenketten.</p>
+<p>Mit diesen beiden Funktionen kann man prüfen, ob eine Zeichenkette mit einer Zeichenfolge beginnt oder endet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Universität der Bundeswehr&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Uni&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;Bundeswehr&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 
 <div class="output_area">
 
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-9-ede45d196aac&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> 
-<span class="ansi-green-intense-fg ansi-bold">     10</span> text_3 <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34; Hallo .&#34;</span>
-<span class="ansi-green-fg">---&gt; 11</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>text_3<span class="ansi-blue-fg">.</span>trim<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;str&#39; object has no attribute &#39;trim&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+True
+</pre>
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -16148,13 +16482,35 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Adressierung-von-Listenelementen-und-Listenbereichen">Adressierung von Listenelementen und Listenbereichen<a class="anchor-link" href="#Adressierung-von-Listenelementen-und-Listenbereichen">&#182;</a></h5><p>Unterelemente können einzeln adressiert und auch geändert werden. Das Format ist dabei</p>
+
+<pre><code>&lt;name&gt;[&lt;start&gt;:&lt;end&gt;:&lt;step&gt;]
+
+&lt;name&gt;  - Name der Liste
+&lt;start&gt; - Index des ersten Listenelements
+&lt;end&gt;   - Index des ersten Elements, das nicht mehr enthalten sein soll
+&lt;step&gt;  - Schrittweite (-1 für rückwärts)</code></pre>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Einzelnes-Listenelement">Einzelnes Listenelement<a class="anchor-link" href="#Einzelnes-Listenelement">&#182;</a></h5><p>Listenelemente können einzeln adressiert werden. Das erste Element hat den Index 0.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Listenelemente können einzeln adressiert werden.</span>
-<span class="c1"># Das erste Element hat den Index 0:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
@@ -16185,12 +16541,20 @@ UNIBWM IST TOLL
 </div>
 
 </div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sie können auch einzeln geändert werden:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sie können auch einzeln geändert werden:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list_mixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;UniBwM&#39;</span><span class="p">]</span>
 <span class="n">my_list_mixed</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;LMU München&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list_mixed</span><span class="p">)</span>
 </pre></div>
@@ -16218,13 +16582,21 @@ UNIBWM IST TOLL
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Bereiche">Bereiche<a class="anchor-link" href="#Bereiche">&#182;</a></h5><p>Man kann auch Bereiche adressieren. Dazu gibt man den Index des ersten Elements und das erste nicht mehr gewünschte Element an.</p>
+<p>Wenn man einen der beiden Werte wegläßt, wir der Anfang bzw. das Ende der Liste verwendet.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Man kann auch Bereiche adressieren:</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 
 <span class="c1"># Alle ab dem zweiten Element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
@@ -16232,8 +16604,6 @@ UNIBWM IST TOLL
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
 <span class="c1"># Alle vom zweiten bis zum dritten Element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
-<span class="c1"># Alle ohne die letzten beiden</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -16253,7 +16623,6 @@ UNIBWM IST TOLL
 <pre>[&#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;]
 [&#39;one&#39;, &#39;two&#39;]
 [&#39;two&#39;, &#39;three&#39;]
-[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]
 </pre>
 </div>
 </div>
@@ -16262,12 +16631,60 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Alle Elemente ohne die letzten beiden:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Man kann auch Bereiche einer Liste ändern oder die Liste dadurch verkürzen oder verlängern:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bereiche-ersetzen">Bereiche ersetzen<span class="tocSkip" /><a class="anchor-link" href="#Bereiche-ersetzen">&#182;</a></h4><p>Man kann auch Bereiche einer Liste ändern oder die Liste dadurch verkürzen oder verlängern.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;zwei&#39;</span><span class="p">,</span> <span class="s1">&#39;drei&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16328,13 +16745,20 @@ UNIBWM IST TOLL
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Achtung:</strong> Wenn man einen Listen<strong>BEREICH</strong> ändert, muss man eine <strong>Liste</strong> übergeben.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Achtung: Wenn man einen ListenBEREICH ändert, muss man eine Liste übergeben. </span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one_and_two&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16362,14 +16786,23 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sonst versucht Python, den Wert <strong>als Liste seiner Unterelemente</strong> zu verstehen, zum Beispiel eine Zeichenkette in eine Liste von Buchstaben zu zerlegen.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sonst Versucht python, den Wert als Liste seiner Unterelemente zu verstehen.</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
-<span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ABC&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ABC&#39;</span>  <span class="c1"># ABC ist hier eine Zeichenkette</span>
+<span class="c1"># Python versucht, den übergebenen Wert in Unterlemente zu zerlegen und diese einzufügen.</span>
+<span class="c1"># Daher werden hier die drei Buchstaben A, B und C als neue Listenelemente eingefügt.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 
@@ -16387,7 +16820,7 @@ UNIBWM IST TOLL
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;ABC&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;]
+<pre>[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;]
 </pre>
 </div>
 </div>
@@ -16396,13 +16829,20 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wenn man <strong>ein</strong> Listenelement ändert, muss man <strong>ein Element übergeben</strong>:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wenn man ein Listenelement ändert, muss man ein Element übergeben</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;drei&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16430,15 +16870,23 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wenn man an einer Position <strong>MEHRERE</strong> neue Elemente einfügen will, 
+muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</p>
+<p>Das geschieht im folgenden durch 
+<code>my_list[2:3]</code>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wenn man an einer Position MEHRE neue Elemente einfügen will, </span>
-<span class="c1"># muss man diese Position als Bereich der Länge 1 adressieren.</span>
-
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;drei_a&#39;</span><span class="p">,</span> <span class="s1">&#39;drei_b&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16465,7 +16913,7 @@ UNIBWM IST TOLL
 </div>
 </div>
 
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[71]:</div>
@@ -16499,14 +16947,126 @@ UNIBWM IST TOLL
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Schrittweite">Schrittweite<span class="tocSkip" /><a class="anchor-link" href="#Schrittweite">&#182;</a></h4><p>Man kann auch eine Schrittweite angeben und damit erreichen, dass nur jedes n-te Element aus der Liste zurückgeliefert wird.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Listen: append()</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">,</span> <span class="s1">&#39;six&#39;</span><span class="p">]</span>
+<span class="c1"># Jedes zweite Element zwischen 0 und 4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;one&#39;, &#39;three&#39;, &#39;five&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Jedes dritte Element</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[::</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;one&#39;, &#39;four&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alle Elemente in umgekehrter Reihenfolge</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;six&#39;, &#39;five&#39;, &#39;four&#39;, &#39;three&#39;, &#39;two&#39;, &#39;one&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Verl&#228;ngern-der-Liste-mit-append()">Verl&#228;ngern der Liste mit <code>append()</code><a class="anchor-link" href="#Verl&#228;ngern-der-Liste-mit-append()">&#182;</a></h5><p>Mit der Funktion <code>append(&lt;wert&gt;)</code> kann man einen Wert am Ende der Liste hinzufügen.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16534,13 +17094,20 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Erweitern-der-Liste-mit-extend()">Erweitern der Liste mit <code>extend()</code><a class="anchor-link" href="#Erweitern-der-Liste-mit-extend()">&#182;</a></h5><p>Mit der Funktion <code>extend(&lt;neue_liste&gt;)</code> kann man eine Liste am Ende der Liste hinzufügen.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Listen: extend()</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16568,16 +17135,34 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Kontrollfrage:">Kontrollfrage:<span class="tocSkip" /><a class="anchor-link" href="#Kontrollfrage:">&#182;</a></h4><p>Was passiert, wenn Sie der Methode <code>append()</code> als Parameter eine <strong>LISTE</strong> übergeben?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Kontrollfrage:</span>
-<span class="c1"># Was passiert, wenn Sie der Methode &#39;append&#39; eine LISTE als Parameter übergeben?</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
-<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16602,17 +17187,43 @@ UNIBWM IST TOLL
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wie Sie sehen, wird in diesem Fall die Liste <code>['three', 'four']</code> als Element an dritter Stelle eingefügt. Das dritte Element ist danach also selbst eine Liste.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Kontrollfrage">Kontrollfrage<span class="tocSkip" /><a class="anchor-link" href="#Kontrollfrage">&#182;</a></h4><p>Was passiert, wenn Sie der Methode <code>extend()</code> als Parameter einen einzelnen Wert übergeben?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Kontrollfrage:</span>
-<span class="c1"># Was passiert, wenn Sie der Methode &#39;extend&#39; einen einzelnen Wert als Parameter übergeben?</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
-<span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="s1">&#39;three&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16637,14 +17248,29 @@ UNIBWM IST TOLL
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wie Sie sehen versucht Python, den Wert <strong>als Liste seiner Unterelemente</strong> zu verstehen, zum Beispiel eine Zeichenkette in eine Liste von Buchstaben zu zerlegen.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wenn eine atomare Variable übergeben wird und diese Zerlegung nicht möglich ist, gibt es eine Fehlermeldung:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wenn eine atomare Variable übergeben wird, gibt es eine Fehlermeldung:</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16666,11 +17292,10 @@ UNIBWM IST TOLL
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-76-bca24c3ec178&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Wenn eine atomare Variable übergeben wird, gibt es eine Fehlermeldung:</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> my_list <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;one&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;two&#39;</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>my_list<span class="ansi-blue-fg">.</span>extend<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>my_list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">&lt;ipython-input-107-f117dde7810b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> my_list <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;one&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;two&#39;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>my_list<span class="ansi-blue-fg">.</span>extend<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>my_list<span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">TypeError</span>: &#39;int&#39; object is not iterable</pre>
 </div>
@@ -16680,41 +17305,233 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Entfernen-von-Elementen-aus-einer-Liste">Entfernen von Elementen aus einer Liste<a class="anchor-link" href="#Entfernen-von-Elementen-aus-einer-Liste">&#182;</a></h5><p>Wenn man ein Element aus einer Liste entfernen möchte, kann man dies über seinen <strong>Wert</strong> mit der Funktion <code>remove(&lt;wert&gt;)</code> erreichen. Wenn stattdessen die <strong>Position</strong> des Elementes bekannt ist, gibt es eine Funktion <code>pop(&lt;position&gt;)</code>.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Man kann Listen einfach sortieren:</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
-
-<span class="n">woerter_liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoe&#39;</span><span class="p">,</span> <span class="s1">&#39;Anton&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">woerter_liste</span><span class="p">)</span>
-<span class="n">woerter_liste</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">woerter_liste</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">]</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;Paul&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section></section><section><section>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Peter&#39;, &#39;Mary&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gemischte Listze</span>
-<span class="n">gemischte_liste_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">7.2</span><span class="p">]</span>
-<span class="n">gemischte_liste_1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">gemischte_liste_1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">]</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># Das Folgende geht nicht</span>
-<span class="n">gemischte_liste_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Zoe&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
-<span class="n">gemischte_liste_2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">gemischte_liste_2</span><span class="p">)</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Paul&#39;, &#39;Mary&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>pop()</code> (also ohne Indexposition als Parameter) entfernt das Element am Ende der Liste:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">]</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Peter&#39;, &#39;Paul&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>pop()</code> mit oder ohne Parameter liefert das entfernte Element als Ergebnis zurück.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Peter
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h6 id="Stapel-(Stack)-und-Last-in,-first-out">Stapel (Stack) und Last in, first out<a class="anchor-link" href="#Stapel-(Stack)-und-Last-in,-first-out">&#182;</a></h6><p>Das kann man sehr einfach verwenden, um einen Stapel (Stack) zu implementieren oder in anderen Zusammenhängen das <a href="https://de.wikipedia.org/wiki/Last_In_%E2%80%93_First_Out">LIFO-Prinzip ("last in, first out")</a> anzuwenden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mitarbeiter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Linda&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
+<span class="n">mitarbeiter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Frank&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
+<span class="n">mitarbeiter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Alex&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
+<span class="c1"># Wer zuletzt eingestellt wurde, wird zuerst wieder entlassen.</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">mitarbeiter</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Leider müssen wir &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; wieder entlassen.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;]
+Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &#39;Frank&#39;]
+Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &#39;Frank&#39;, &#39;Alex&#39;]
+Leider müssen wir Alex wieder entlassen.
+Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &#39;Frank&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Sortieren-von-Listen">Sortieren von Listen<a class="anchor-link" href="#Sortieren-von-Listen">&#182;</a></h5><p>Man kann Listen einfach sortieren. Dazu gibt hat eine Liste die Funktion <code>sort()</code>. Sie sortiert die Elemente in der ursprünglichen Liste um.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="n">woerter_liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoe&#39;</span><span class="p">,</span> <span class="s1">&#39;Anton&#39;</span><span class="p">]</span>
+<span class="n">woerter_liste</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">woerter_liste</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16732,9 +17549,7 @@ UNIBWM IST TOLL
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1, 2, 3, 4, 5, 6]
-[&#39;Peter&#39;, &#39;Mary&#39;, &#39;Zoe&#39;, &#39;Anton&#39;]
 [&#39;Anton&#39;, &#39;Mary&#39;, &#39;Peter&#39;, &#39;Zoe&#39;]
-[1, 1.5, 2, 7.2]
 </pre>
 </div>
 </div>
@@ -16743,15 +17558,21 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Achtung:</strong> sort() ist eine Funktion, <strong>die das Objekt verändert.</strong>
+Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am bisherigen Ort sortiert.</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Achtung: sort() ist eine Methode, die das Objekt verändert</span>
-<span class="c1"># Es wird keine sortierte Version zurückgeliefert,</span>
-<span class="c1"># sondern das Objekt am bisherigen Ort sortiert.</span>
-<span class="n">meine_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">meine_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meine_liste</span><span class="o">.</span><span class="n">sort</span><span class="p">())</span>
 </pre></div>
 
@@ -16778,13 +17599,20 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Inverse-Sortierfolge">Inverse Sortierfolge<span class="tocSkip" /><a class="anchor-link" href="#Inverse-Sortierfolge">&#182;</a></h5><p>Mit dem Parameter <code>reverse=True</code> kann man die Sortierreihenfolge umkehren.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Das geht auch mit inverser Sortierfolge:</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
@@ -16812,6 +17640,103 @@ UNIBWM IST TOLL
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Es ist möglich, <strong>Listen mit verschiedenen Datentypen</strong> zu sortieren, sofern für jedes mögliche Wertepaar ein Vergleichsoperator definiert ist.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gemischte Liste</span>
+<span class="n">gemischte_liste_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">7.2</span><span class="p">]</span>
+<span class="n">gemischte_liste_1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gemischte_liste_1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 1.5, 2, 7.2]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die <strong>Sortierung funktioniert</strong> aber <strong>nicht, wenn</strong> eine Liste Elemente enthält, für die <strong>kein Vergleichsoperator definiert ist.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gemischte_liste_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Zoe&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">gemischte_liste_2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gemischte_liste_2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-110-054ac3c452ca&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> gemischte_liste_2 <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;Zoe&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>gemischte_liste_2<span class="ansi-blue-fg">.</span>sort<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>gemischte_liste_2<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: &#39;&lt;&#39; not supported between instances of &#39;str&#39; and &#39;int&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Suchen-in-Listen">Suchen in Listen<a class="anchor-link" href="#Suchen-in-Listen">&#182;</a></h5>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[80]:</div>
@@ -16847,49 +17772,11 @@ UNIBWM IST TOLL
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Suchen zu Fuß</span>
-<span class="n">my_liste_4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hepp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mueller&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">]</span>
-<span class="n">positionszaehler</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_liste_4</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;Meier&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Täter gefunden!&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Position:&#39;</span><span class="p">,</span> <span class="n">positionszaehler</span><span class="p">)</span>
-    <span class="n">positionszaehler</span> <span class="o">=</span> <span class="n">positionszaehler</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Täter gefunden!
-Position: 2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="s1">&#39;Mueller&#39;</span> <span class="ow">in</span> <span class="n">my_liste_4</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_liste_4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hepp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mueller&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="s1">&#39;Mueller&#39;</span> <span class="ow">in</span> <span class="n">my_liste_4</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Täter gefunden!&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -16915,13 +17802,22 @@ Position: 2
 </div>
 </div>
 
-</div><div class="fragment">
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>index(&lt;wert&gt;)</code> liefert die erste Position eines passenden Wertes:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="s1">&#39;Mueller&#39;</span> <span class="ow">in</span> <span class="n">my_liste_4</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_liste_4</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hepp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mueller&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="s1">&#39;Mueller&#39;</span> <span class="ow">in</span> <span class="n">my_liste_4</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">my_liste_4</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Mueller&#39;</span><span class="p">))</span>
 </pre></div>
 
@@ -16947,11 +17843,19 @@ Position: 2
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h4>
+<h4 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h4><p>Tuples sind strukturierte Datentypen aus mehreren Elementen. Sie sind Immutables, können also nicht verändert werden. Man kann aber natürlich ein neues Tuples aus geänderten Werten erzeugen.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Beispiele">Beispiele<a class="anchor-link" href="#Beispiele">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -16973,21 +17877,54 @@ Position: 2
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Entpacken-eines-Tuples-in-mehrere-Zielvariablen">Entpacken eines Tuples in mehrere Zielvariablen<a class="anchor-link" href="#Entpacken-eines-Tuples-in-mehrere-Zielvariablen">&#182;</a></h5><p>Man kann ein Tupel elegant in seine Bestandteile zerlegen und diese einzelnen Variablen zuweisen. Voraussetzung ist nur, dass auf der linken Seite ebensoviele Variablen genannt werden wie das Tupel Bestandteile hat.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Entpacken</span>
-<span class="n">latitude</span> <span class="o">=</span> <span class="mf">48.0803</span>
-<span class="n">longitude</span> <span class="o">=</span> <span class="mf">11.6382</span>
-<span class="n">geo_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">)</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">geo_position</span> <span class="o">=</span> <span class="p">(</span><span class="mf">48.0803</span><span class="p">,</span> <span class="mf">11.6382</span><span class="p">)</span>
 <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">geo_position</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+</pre></div>
 
-<span class="c1"># Das funktioniert auch mit anderen komplexen Datentypen</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>48.0803
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Das funktioniert übriges auch mit anderen komplexen Datentypen</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;ABC&quot;</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">text</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -17007,8 +17944,7 @@ Position: 2
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>48.0803
-A
+<pre>A
 </pre>
 </div>
 </div>
@@ -17016,7 +17952,7 @@ A
 </div>
 </div>
 
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[85]:</div>
@@ -17049,13 +17985,20 @@ A
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Unterelemente eines Tuples können aber nicht geändert werden:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Die Unterelemente eines Tuples können aber nicht geändert werden:</span>
-<span class="n">geo_position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">44.123</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">geo_position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">44.123</span>
 </pre></div>
 
     </div>
@@ -17486,7 +18429,7 @@ John Lennon
 </div>
 </div>
 
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[98]:</div>
@@ -17520,11 +18463,11 @@ John Lennon
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Named-Tuples">Named Tuples<a class="anchor-link" href="#Named-Tuples">&#182;</a></h4><ul>
+<h4 id="Named-Tuples-(nicht-klausurrelevant)">Named Tuples (nicht klausurrelevant)<a class="anchor-link" href="#Named-Tuples-(nicht-klausurrelevant)">&#182;</a></h4><ul>
 <li>Nicht Gegenstand dieser Vorlesung</li>
 <li><a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">https://docs.python.org/3/library/collections.html#collections.namedtuple</a></li>
 </ul>
@@ -17575,7 +18518,7 @@ John Lennon
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Typumwandlung-(Type-Cast)">Typumwandlung (Type Cast)<a class="anchor-link" href="#Typumwandlung-(Type-Cast)">&#182;</a></h3>
+<h3 id="Typumwandlung-(Type-Cast)">Typumwandlung (Type Cast)<a class="anchor-link" href="#Typumwandlung-(Type-Cast)">&#182;</a></h3><h4 id="Zeichenkette-in-Ganzzahl-(int)">Zeichenkette in Ganzzahl (int)<a class="anchor-link" href="#Zeichenkette-in-Ganzzahl-(int)">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -17584,8 +18527,7 @@ John Lennon
 <div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zeichenkette in Ganzzahl (int)</span>
-<span class="n">zahl_als_text</span> <span class="o">=</span> <span class="s2">&quot;7&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl_als_text</span> <span class="o">=</span> <span class="s2">&quot;7&quot;</span>
 <span class="n">zahl_als_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">zahl_als_text</span><span class="p">)</span>
 </pre></div>
 
@@ -17594,13 +18536,19 @@ John Lennon
 </div>
 
 </div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Zeichenkette-als-Gleitkommazahl-(float)">Zeichenkette als Gleitkommazahl (float)<a class="anchor-link" href="#Zeichenkette-als-Gleitkommazahl-(float)">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zeichenkette als Gleitkommazahl (float)</span>
-<span class="n">float_als_text</span> <span class="o">=</span> <span class="s2">&quot;3.1415&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">float_als_text</span> <span class="o">=</span> <span class="s2">&quot;3.1415&quot;</span>
 <span class="n">float_als_zahl</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">float_als_text</span><span class="p">)</span>
 </pre></div>
 
@@ -17609,13 +18557,19 @@ John Lennon
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Zahl-als-Zeichenkette-(String)">Zahl als Zeichenkette (String)<a class="anchor-link" href="#Zahl-als-Zeichenkette-(String)">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Zahl als Zeichenkette (String)</span>
-<span class="n">zahl_als_text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl_als_text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">float_als_text</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">))</span>
 </pre></div>
 
@@ -17624,13 +18578,19 @@ John Lennon
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Umwandlung-einer-Zahl-in-eine-Zeichenkette">Umwandlung einer Zahl in eine Zeichenkette<a class="anchor-link" href="#Umwandlung-einer-Zahl-in-eine-Zeichenkette">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Umwandlung einer Zahl in eine Zeichenkette</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
 <span class="n">a_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
 <span class="c1"># Was ist hier der Unterschied?</span>
