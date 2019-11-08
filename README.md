@@ -89,7 +89,7 @@ I currently use the following settings for `rise` and `toc`in the notebook's met
 - I would like to include the date of creation as a version signature to the footer of PDF versions, but I have not yet figured out how. Using an f-String as the value for the `"rise: {"header": ...} value might work, but where will I put the datetime import?
 - Need a way to generate an HTML version of the notebook that includes the numbering from the ToC extension, but not the ToC (or the ToC in the first cell).
 - I would like to have the headline numbering for subsequent notebooks start at 2, 3, 4 ... respectively - is there a way to set this?
-- When generating PDFs with `decktape, there are a few errors regarding missing includes / 404s; what is the effect and how to solve this?
+- When generating PDFs with `decktape`, there are a few errors regarding missing includes / 404s; what is the effect and how to solve this?
 - I would like to have all fragments of a slide appear on a single PDF page, but RISE/decktape do not seem to pass the respective URI parameter.
 - I need a mechanism to hide solutions from the tutorial in at least an HTML or PDF version, ideally managed via a generic tag or cell meta-data. The two available extensions for only in the ipynb view, neither in HTML export nor PDF.
 - The font size varies with output resolution. This is a nuissance.
