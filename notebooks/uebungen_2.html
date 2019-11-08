@@ -1,65 +1,13 @@
-
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta charset="utf-8" />
 
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-
-<title>pip_unit_2 slides</title>
+<title>uebungen_2</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
 
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -13112,158 +13060,148 @@ ul.typeahead-list  > li > a.pull-right {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #727272;
-}
-.reveal .controls .navigate-left.enabled:hover,
-.reveal .controls .navigate-left.enabled.enabled:hover {
-  border-right-color: #dfdfdf;
-}
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #727272;
-}
-.reveal .controls .navigate-right.enabled:hover,
-.reveal .controls .navigate-right.enabled.enabled:hover {
-  border-left-color: #dfdfdf;
-}
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #727272;
-}
-.reveal .controls .navigate-up.enabled:hover,
-.reveal .controls .navigate-up.enabled.enabled:hover {
-  border-bottom-color: #dfdfdf;
-}
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #727272;
-}
-.reveal .controls .navigate-down.enabled:hover,
-.reveal .controls .navigate-down.enabled.enabled:hover {
-  border-top-color: #dfdfdf;
-}
-.reveal .progress span {
-  background: #727272;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
-.rendered_html p {
-  text-align: inherit;
-}
-::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar *
-{
-  background:transparent;
-}
-::-webkit-scrollbar-thumb
-{
-  background: #727272 !important;
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/main.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/toc2.js"></script>
+
+<script>
+$( document ).ready(function(){
+
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": true, "sideBar": true, "skip_h1_title": false, "title_cell": "Table of Contents", "title_sidebar": "Contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "512px"}, "toc_section_display": true, "toc_window_display": false};
+
+            // fire the main function with these parameters
+            require(['nbextensions/toc2/toc2'], function (toc2) {
+                toc2.table_of_contents(cfg);
+            });
+    });
+</script>
 <body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-
-<div class="reveal">
-<div class="slides">
-<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München
-<br /><br /></p>
-<h2 id="Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">Einheit 2: Kontrollflussstrukturen und Algorithmik <span class="tocSkip" /><a class="anchor-link" href="#Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">&#182;</a></h2><p><strong>Version: 2019-11-08</strong></p>
-
+<h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München</p>
+<h2 id="&#220;bungsaufgaben-Einheit-2">&#220;bungsaufgaben Einheit 2<span class="tocSkip" /><a class="anchor-link" href="#&#220;bungsaufgaben-Einheit-2">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sequenz">Sequenz<a class="anchor-link" href="#Sequenz">&#182;</a></h1>
+<p><strong>Hinweis:</strong> Die gezeigten Beispiele sind mit Hinblick auf das Lernziel bewusst gestaltet. Sie nutzen mit Absicht möglichst wenige fertige Funktionen aus der Bibliothek von Python, selbst wenn diese schneller oder kürzer wären.</p>
+<p>Sie sollen hier üben, ein Problem durch eine Kontrollflussstruktur aus möglichst einfachen Anweisungen algorithmisch eigenständig zu lösen.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Wandeln-Sie-eine-beliebige-Bin&#228;rzahl-in-eine-Dezimalzahl-um.">Aufgabe: Wandeln Sie eine beliebige Bin&#228;rzahl in eine Dezimalzahl um.<a class="anchor-link" href="#Aufgabe:-Wandeln-Sie-eine-beliebige-Bin&#228;rzahl-in-eine-Dezimalzahl-um.">&#182;</a></h2><p>Verwenden Sie dabei keine von Python für diesen Zweck explizit vorhandenen Funktionen!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Erste Anweisung&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Zweite Anweisung&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dritte Anweisung&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binaerzahl</span> <span class="o">=</span> <span class="s1">&#39;01110101&#39;</span>
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dezimalzahl</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">stellenwert</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># Wir müssen an der letzten Stelle anfangen</span>
+<span class="n">letzte_stelle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">letzte_stelle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">dezimalzahl</span> <span class="o">=</span> <span class="n">dezimalzahl</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">[</span><span class="n">position</span><span class="p">])</span> <span class="o">*</span> <span class="n">stellenwert</span>
+    <span class="n">stellenwert</span> <span class="o">=</span> <span class="n">stellenwert</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">,</span> <span class="s1">&#39; entspricht &#39;</span><span class="p">,</span> <span class="n">dezimalzahl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kontrolle: &#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13280,9 +13218,8 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Erste Anweisung
-Zweite Anweisung
-Dritte Anweisung
+<pre>01110101  entspricht  117
+Kontrolle:  117
 </pre>
 </div>
 </div>
@@ -13290,30 +13227,634 @@ Dritte Anweisung
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Schleifen">Schleifen<a class="anchor-link" href="#Schleifen">&#182;</a></h1>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Grundlagen:-Schleifen-mit-for">Grundlagen: Schleifen mit <code>for</code><a class="anchor-link" href="#Grundlagen:-Schleifen-mit-for">&#182;</a></h2>
+<p><strong>Eleganter:</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Schleife für Liste mit Zahlen</span>
-<span class="n">zahlenreihe</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="n">zahlenreihe</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binaerzahl</span> <span class="o">=</span> <span class="s1">&#39;01110101&#39;</span>
+<span class="n">dezimalzahl</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">position</span><span class="p">,</span> <span class="n">zeichen</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">)):</span>
+    <span class="n">dezimalzahl</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">zeichen</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">**</span><span class="n">position</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dezimalzahl</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>117
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Python-Profi</span>
+<span class="c1"># int() erlaubt die Angabe der Basis als Parameter (2 für Binärzahlen)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>117
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Berechnen-Sie-die-Quersumme-einer-beliebigen-Ganzzahl.">Aufgabe: Berechnen Sie die Quersumme einer beliebigen Ganzzahl.<a class="anchor-link" href="#Aufgabe:-Berechnen-Sie-die-Quersumme-einer-beliebigen-Ganzzahl.">&#182;</a></h2><p><strong>Hinweis:</strong> Denken Sie daran, dass man eine Zahl mit <code>str(&lt;zahl&gt;)</code> in eine Zeichenkette umwandeln und mit <code>int(&lt;ziffer&gt;)</code> den Wert einer Zahl oder Ziffer aus einem String erhalten kann.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">124723847273489</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quersumme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">stelle</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+    <span class="n">quersumme</span> <span class="o">=</span> <span class="n">quersumme</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">stelle</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quersumme</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>71
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Berechnen-Sie-die-Fakult&#228;t-x!.">Aufgabe: Berechnen Sie die Fakult&#228;t <code>x!</code>.<a class="anchor-link" href="#Aufgabe:-Berechnen-Sie-die-Fakult&#228;t-x!.">&#182;</a></h2><p>Die Fakultät $x!$ ist das Produkt aller ganzen Zahlen von $x &gt;= zahl &gt; 0$.</p>
+<p><strong>Beispiel:</strong>
+<code>3! = 3 * 2 * 1 = 6</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fakultaet</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">fakultaet</span> <span class="o">=</span> <span class="n">fakultaet</span> <span class="o">*</span> <span class="n">zahl</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Fakultät von &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39; ist &#39;</span><span class="p">,</span> <span class="n">fakultaet</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Die Fakultät von  8  ist  40320
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Suche-in-einer-Liste">Aufgabe: Suche in einer Liste<a class="anchor-link" href="#Aufgabe:-Suche-in-einer-Liste">&#182;</a></h2><h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3><p>Schreiben Sie ein Programm, das in einer Liste nach einem gegebenen Wert sucht. Wenn der Wert gefunden wird, soll seine Position in der Liste ausgegeben werden.</p>
+<p>Nutzen Sie NICHT die von Python bereitgestellte Suchfunktion, sondern entwickeln Sie eine eigene Lösung auf Basis einer Schleife.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hepp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mueller&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">]</span>
+<span class="n">gesuchter_wert</span> <span class="o">=</span> <span class="s1">&#39;Meier&#39;</span>
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">positionszaehler</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">my_liste</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">gesuchter_wert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">gesuchter_wert</span><span class="p">,</span> <span class="s1">&#39;gefunden an Position&#39;</span><span class="p">,</span> <span class="n">positionszaehler</span><span class="p">)</span>
+    <span class="n">positionszaehler</span> <span class="o">=</span> <span class="n">positionszaehler</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Meier gefunden an Position 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Berechnen-Sie-die-Pr&#252;fziffer-f&#252;r-eine-GTIN-13-/-EAN-13.-(anspruchsvoll)">Aufgabe: Berechnen Sie die Pr&#252;fziffer f&#252;r eine GTIN-13 / EAN-13. (anspruchsvoll)<a class="anchor-link" href="#Aufgabe:-Berechnen-Sie-die-Pr&#252;fziffer-f&#252;r-eine-GTIN-13-/-EAN-13.-(anspruchsvoll)">&#182;</a></h2><p>Die 13-stellige Ziffernfolge unter dem Barcode eines Konsumgüterproduktes besteht aus zwölf Nutzziffern und einer Prüfziffer, die Eingabe- und Lesefehler erkennen hilft.</p>
+<p>Diese Prüfziffer wird aus den Nutzziffern wie folgt berechnet:</p>
+<ul>
+<li>Zunächst wird jede Stelle von links beginnend abwechselnd mit 1 und mit 3 multipliziert und zu einer Summe addiert. Dies nennt man eine gewichtete Quersumme, weil die Position einer Ziffer für die Quersumme relevant ist. Einfache Zahlendreher führen zu einer anderen Quersumme.</li>
+<li>Anschließend wird die Differenz zur nächstgrößeren durch zehn teilbaren Zahl ermittelt. Dies ergibt die Prüfziffer, die an 13ter Stelle eingefügt wird.</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<p>$401500073853 =&gt;
+1 * 4 + 3 * 0 + 1 * 1 + 3 * 5 + 1 * 0 + 3 * 0 + 1 * 0 + 3 * 7 + 1 * 3 + 3 * 8 + 1 * 5 + 3 * 3 = 82$</p>
+<p>$ 90 - 82 = 8$</p>
+<p>Die Prüfziffer ist also 8.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gtin_13</span> <span class="o">=</span> <span class="s1">&#39;401500073853&#39;</span>
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">checksum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">gewicht</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">ziffer</span> <span class="ow">in</span> <span class="n">gtin_13</span><span class="p">:</span>
+    <span class="n">checksum</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ziffer</span><span class="p">)</span> <span class="o">*</span> <span class="n">gewicht</span>
+    <span class="c1"># Die Gewichtung könnte eleganter alterniert werden,</span>
+    <span class="c1"># aber das wäre unnötig verwirrend.</span>
+    <span class="k">if</span> <span class="n">gewicht</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">gewicht</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">gewicht</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">naechstgroessere_zahl</span> <span class="o">=</span> <span class="p">(</span><span class="n">checksum</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">checksum</span> <span class="o">=</span> <span class="n">naechstgroessere_zahl</span> <span class="o">-</span> <span class="n">checksum</span>
+<span class="c1"># Eleganter, aber komplizierter:</span>
+<span class="c1"># checksum = (10 - checksum % 10) % 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">checksum</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Wandeln-Sie-eine-Dezimalzahl-in-eine-Bin&#228;rzahl-um.">Aufgabe: Wandeln Sie eine Dezimalzahl in eine Bin&#228;rzahl um.<a class="anchor-link" href="#Aufgabe:-Wandeln-Sie-eine-Dezimalzahl-in-eine-Bin&#228;rzahl-um.">&#182;</a></h2><p>Verwenden Sie dabei keine von Python für diesen Zweck explizit vorhandenen Funktionen!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3><p>Gegeben sei eine Dezimalzahl zwischen 0 und 255. Sie soll in eine Binärzahl umgewandelt werden.</p>
+<p><strong>Tipp:</strong> Wir wissen, dass das höchste Bit einer achtstelligen Binärzahl die Wertigkeit 128 hat, das entspricht $2^7$. Wir können also nacheinander die Wertigkeiten aller Stellen von der größten zur kleinsten nehmen und prüfen, ob die Zahl größer oder gleich diesem Wert ist. Wenn ja, ist das Bit gesetzt und der Wert wird abgezogen.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dezimalzahl</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">154</span><span class="p">)</span>
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Vereinfacht</span>
+<span class="n">eingabewert</span> <span class="o">=</span> <span class="n">dezimalzahl</span>
+<span class="n">ausgabewert</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">wertigkeiten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">bit_wert</span> <span class="ow">in</span> <span class="n">wertigkeiten</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">eingabewert</span> <span class="o">&gt;=</span> <span class="n">bit_wert</span><span class="p">:</span>
+        <span class="n">ausgabewert</span> <span class="o">=</span> <span class="n">ausgabewert</span> <span class="o">+</span> <span class="s2">&quot;1&quot;</span>
+        <span class="n">eingabewert</span> <span class="o">=</span> <span class="n">eingabewert</span> <span class="o">-</span> <span class="n">bit_wert</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ausgabewert</span> <span class="o">=</span> <span class="n">ausgabewert</span> <span class="o">+</span> <span class="s2">&quot;0&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Dezimalzahl&#39;</span><span class="p">,</span> <span class="n">dezimalzahl</span><span class="p">,</span> <span class="s1">&#39;entspricht der Binärzahl&#39;</span><span class="p">,</span> <span class="n">ausgabewert</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Die Dezimalzahl 154 entspricht der Binärzahl 10011010
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung,-eleganter">Musterl&#246;sung, eleganter<span class="tocSkip" /><a class="anchor-link" href="#Musterl&#246;sung,-eleganter">&#182;</a></h3><p>Eleganter ist es, die Zweierpotenzen, beginnend mit der größten, die in Frage kommt, abzuarbeiten.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eingabewert</span> <span class="o">=</span> <span class="n">dezimalzahl</span>
+<span class="n">ausgabewert</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="c1"># 0 soll eingeschlossen werden, daher muss es range(7, -1, -1) </span>
+<span class="c1"># und nicht range(7, 0, -1) heißen</span>
+<span class="k">for</span> <span class="n">bit</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">eingabewert</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">**</span><span class="n">bit</span><span class="p">:</span>
+        <span class="n">ausgabewert</span> <span class="o">=</span> <span class="n">ausgabewert</span> <span class="o">+</span> <span class="s2">&quot;1&quot;</span>
+        <span class="n">eingabewert</span> <span class="o">=</span> <span class="n">eingabewert</span> <span class="o">-</span> <span class="mi">2</span><span class="o">**</span><span class="n">bit</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ausgabewert</span> <span class="o">=</span> <span class="n">ausgabewert</span> <span class="o">+</span> <span class="s2">&quot;0&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Dezimalzahl&#39;</span><span class="p">,</span> <span class="n">dezimalzahl</span><span class="p">,</span> <span class="s1">&#39;entspricht der Binärzahl&#39;</span><span class="p">,</span> <span class="n">ausgabewert</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Die Dezimalzahl 154 entspricht der Binärzahl 10011010
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Erzeugen-Sie-alle-m&#246;glichen-Passwortkombinationen.">Aufgabe: Erzeugen Sie alle m&#246;glichen Passwortkombinationen.<a class="anchor-link" href="#Aufgabe:-Erzeugen-Sie-alle-m&#246;glichen-Passwortkombinationen.">&#182;</a></h2><p>Nehmen wir an, die meisten Nutzer verwenden eine Kombination aus dem Vornamen einer Person und einer Jahreszahl.
+Schreiben Sie ein Programm, dass alle möglichen Kombinationen aus den Namen</p>
+
+<pre><code>vornamen = ['Peter', 'Petra', 'Paul', 'Paula', 'Frank', 'Susanne', 'Martin', 'Martina']</code></pre>
+<p>und den Jahreszahlen von 2010 bis 2019 erzeugt.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hier einfügen</span>
+<span class="n">vornamen</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Petra&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Paula&#39;</span><span class="p">,</span> <span class="s1">&#39;Frank&#39;</span><span class="p">,</span> <span class="s1">&#39;Susanne&#39;</span><span class="p">,</span> <span class="s1">&#39;Martin&#39;</span><span class="p">,</span> <span class="s1">&#39;Martina&#39;</span><span class="p">]</span>
+<span class="n">passwoerter</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">vornamen</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">jahr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">2020</span><span class="p">):</span>
+        <span class="n">passwoerter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">jahr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">passwoerter</span><span class="p">)</span>        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Peter2010&#39;, &#39;Peter2011&#39;, &#39;Peter2012&#39;, &#39;Peter2013&#39;, &#39;Peter2014&#39;, &#39;Peter2015&#39;, &#39;Peter2016&#39;, &#39;Peter2017&#39;, &#39;Peter2018&#39;, &#39;Peter2019&#39;, &#39;Petra2010&#39;, &#39;Petra2011&#39;, &#39;Petra2012&#39;, &#39;Petra2013&#39;, &#39;Petra2014&#39;, &#39;Petra2015&#39;, &#39;Petra2016&#39;, &#39;Petra2017&#39;, &#39;Petra2018&#39;, &#39;Petra2019&#39;, &#39;Paul2010&#39;, &#39;Paul2011&#39;, &#39;Paul2012&#39;, &#39;Paul2013&#39;, &#39;Paul2014&#39;, &#39;Paul2015&#39;, &#39;Paul2016&#39;, &#39;Paul2017&#39;, &#39;Paul2018&#39;, &#39;Paul2019&#39;, &#39;Paula2010&#39;, &#39;Paula2011&#39;, &#39;Paula2012&#39;, &#39;Paula2013&#39;, &#39;Paula2014&#39;, &#39;Paula2015&#39;, &#39;Paula2016&#39;, &#39;Paula2017&#39;, &#39;Paula2018&#39;, &#39;Paula2019&#39;, &#39;Frank2010&#39;, &#39;Frank2011&#39;, &#39;Frank2012&#39;, &#39;Frank2013&#39;, &#39;Frank2014&#39;, &#39;Frank2015&#39;, &#39;Frank2016&#39;, &#39;Frank2017&#39;, &#39;Frank2018&#39;, &#39;Frank2019&#39;, &#39;Susanne2010&#39;, &#39;Susanne2011&#39;, &#39;Susanne2012&#39;, &#39;Susanne2013&#39;, &#39;Susanne2014&#39;, &#39;Susanne2015&#39;, &#39;Susanne2016&#39;, &#39;Susanne2017&#39;, &#39;Susanne2018&#39;, &#39;Susanne2019&#39;, &#39;Martin2010&#39;, &#39;Martin2011&#39;, &#39;Martin2012&#39;, &#39;Martin2013&#39;, &#39;Martin2014&#39;, &#39;Martin2015&#39;, &#39;Martin2016&#39;, &#39;Martin2017&#39;, &#39;Martin2018&#39;, &#39;Martin2019&#39;, &#39;Martina2010&#39;, &#39;Martina2011&#39;, &#39;Martina2012&#39;, &#39;Martina2013&#39;, &#39;Martina2014&#39;, &#39;Martina2015&#39;, &#39;Martina2016&#39;, &#39;Martina2017&#39;, &#39;Martina2018&#39;, &#39;Martina2019&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Berechnen-Sie-die-j&#228;hrliche-lineare-Abschreibung-und-den-jeweiligen-Buchwert-eines-Investitionsgutes.">Aufgabe: Berechnen Sie die j&#228;hrliche lineare Abschreibung und den jeweiligen Buchwert eines Investitionsgutes.<a class="anchor-link" href="#Aufgabe:-Berechnen-Sie-die-j&#228;hrliche-lineare-Abschreibung-und-den-jeweiligen-Buchwert-eines-Investitionsgutes.">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3><p>Bei der linearen Abschreibung wird der Restwert am Ende jeder Periode  um einen festen Prozentsatz der Anschaffungskosten vermindert.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">abschreibungsdauer</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Jahre</span>
+<span class="n">abschreibungssatz</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># 10 %</span>
+<span class="n">anschaffungskosten</span> <span class="o">=</span> <span class="mi">23450</span>  <span class="c1"># Euro</span>
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3><p><strong>Hinweis:</strong> Zur lesbareren Formattierung nutzen wir hier f-Strings, die in Einheit 1 im Abschnitt 3.12.1.5 behandelt werden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">restwert</span> <span class="o">=</span> <span class="n">anschaffungskosten</span>
+<span class="n">abschreibung</span> <span class="o">=</span> <span class="n">anschaffungskosten</span> <span class="o">*</span> <span class="n">abschreibungssatz</span>
+<span class="k">for</span> <span class="n">periode</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">abschreibungsdauer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">restwert</span> <span class="o">=</span> <span class="n">restwert</span> <span class="o">-</span> <span class="n">abschreibung</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Restwert am Ende der Periode </span><span class="si">{periode:2d}</span><span class="s1">: </span><span class="si">{restwert:8.2f}</span><span class="s1">&#39;</span><span class="p">)</span>   
     
 </pre></div>
 
@@ -13331,10 +13872,16 @@ Dritte Anweisung
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-4
+<pre>Restwert am Ende der Periode  1: 21105.00
+Restwert am Ende der Periode  2: 18760.00
+Restwert am Ende der Periode  3: 16415.00
+Restwert am Ende der Periode  4: 14070.00
+Restwert am Ende der Periode  5: 11725.00
+Restwert am Ende der Periode  6:  9380.00
+Restwert am Ende der Periode  7:  7035.00
+Restwert am Ende der Periode  8:  4690.00
+Restwert am Ende der Periode  9:  2345.00
+Restwert am Ende der Periode 10:     0.00
 </pre>
 </div>
 </div>
@@ -13342,23 +13889,56 @@ Dritte Anweisung
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Schleife über Liste mit Zeichenketten:</strong></p>
+<h2 id="Berechnen-Sie-die-j&#228;hrliche-degressive-Abschreibung-und-den-jeweiligen-Buchwert-eines-Investitionsgutes.">Berechnen Sie die j&#228;hrliche degressive Abschreibung und den jeweiligen Buchwert eines Investitionsgutes.<a class="anchor-link" href="#Berechnen-Sie-die-j&#228;hrliche-degressive-Abschreibung-und-den-jeweiligen-Buchwert-eines-Investitionsgutes.">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3><p>Bei der degressiven Abschreibung wird der Restwert am Ende jeder Periode um einen festen Prozentsatz des Restwertes vermindert.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freunde</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">freunde</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo, &#39;</span> <span class="o">+</span> <span class="n">person</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">abschreibungsdauer</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Jahre</span>
+<span class="n">abschreibungssatz</span> <span class="o">=</span> <span class="mf">0.20</span>  <span class="c1"># 20 %</span>
+<span class="n">anschaffungskosten</span> <span class="o">=</span> <span class="mi">23450</span>  <span class="c1"># Euro</span>
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">restwert</span> <span class="o">=</span> <span class="n">anschaffungskosten</span>
+<span class="k">for</span> <span class="n">periode</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">abschreibungsdauer</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">abschreibung</span> <span class="o">=</span> <span class="n">restwert</span> <span class="o">*</span> <span class="n">abschreibungssatz</span>
+    <span class="n">restwert</span> <span class="o">=</span> <span class="n">restwert</span> <span class="o">-</span> <span class="n">abschreibung</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Restwert am Ende der Periode </span><span class="si">{periode:2d}</span><span class="s1">: </span><span class="si">{restwert:8.2f}</span><span class="s1">&#39;</span><span class="p">)</span>   
 </pre></div>
 
     </div>
@@ -13375,9 +13955,16 @@ Dritte Anweisung
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hallo, Peter!
-Hallo, Paul!
-Hallo, Mary!
+<pre>Restwert am Ende der Periode  1: 21105.00
+Restwert am Ende der Periode  2: 18994.50
+Restwert am Ende der Periode  3: 17095.05
+Restwert am Ende der Periode  4: 15385.54
+Restwert am Ende der Periode  5: 13846.99
+Restwert am Ende der Periode  6: 12462.29
+Restwert am Ende der Periode  7: 11216.06
+Restwert am Ende der Periode  8: 10094.46
+Restwert am Ende der Periode  9:  9085.01
+Restwert am Ende der Periode 10:  8176.51
 </pre>
 </div>
 </div>
@@ -13385,23 +13972,37 @@ Hallo, Mary!
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Schleife über Zeichen in Zeichenkette</strong></p>
+<h2 id="Aufgabe:-Wechselgeld">Aufgabe: Wechselgeld<a class="anchor-link" href="#Aufgabe:-Wechselgeld">&#182;</a></h2><p>Schreiben Sie ein Python-Programm, das einen Rechnungsbetrag und einen
+Zahlbetrag vom Benutzer erfragt und berechnen Sie dann die kleinste Wechselgeldkombination (auf Basis der Stückelung im Euro-Raum: 1, 2, 5, 10, 20, 50 Cent, 1, 2,
+5, 10, 20, 50, 100, 200 Euro).</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;UniBwM&#39;</span>
-<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">muenzen_und_scheine</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span>
+                       <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
+<span class="c1"># Wir benötigen die Werte der Zahlungsmittel in absteigender Reihenfolge</span>
+<span class="n">muenzen_und_scheine</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">rechnungsbetrag</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Rechnungsbetrag in Euro? &#39;</span><span class="p">))</span>
+<span class="n">zahlbetrag</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Gezahlter Betrag? &#39;</span><span class="p">))</span>
+
+<span class="c1"># Hier einfügen</span>
 </pre></div>
 
     </div>
@@ -13418,12 +14019,8 @@ Hallo, Mary!
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>U
-n
-i
-B
-w
-M
+<pre>Rechnungsbetrag in Euro? 6.65
+Gezahlter Betrag? 9.00
 </pre>
 </div>
 </div>
@@ -13431,24 +14028,30 @@ M
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Mehrere Anweisungen innerhalb einer Schleife:</strong></p>
-<p>Die Einrückung bestimmt, dass der Befehl zum Schleifeninhalt gehört.</p>
-
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wechselgeld_betrag</span> <span class="o">=</span> <span class="n">zahlbetrag</span> <span class="o">-</span> <span class="n">rechnungsbetrag</span>
+<span class="n">wechselgeld_betrag</span> <span class="o">=</span> <span class="n">wechselgeld_betrag</span> <span class="o">*</span> <span class="mi">100</span>  <span class="c1"># in Cent</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">muenzen_und_scheine</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">wechselgeld_betrag</span> <span class="o">&gt;=</span> <span class="n">item</span><span class="p">:</span>
+        <span class="n">anzahl</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">wechselgeld_betrag</span> <span class="o">//</span> <span class="n">item</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">anzahl</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+        <span class="n">wechselgeld_betrag</span> <span class="o">=</span> <span class="n">wechselgeld_betrag</span> <span class="o">-</span> <span class="n">item</span> <span class="o">*</span> <span class="n">anzahl</span>
+        <span class="c1"># Eleganter über Divisionsrest:</span>
+        <span class="c1"># wechselgeld_betrag = wechselgeld_betrag % item</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0 x&#39;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13465,14 +14068,20 @@ M
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-Hallo
-2
-Hallo
-3
-Hallo
-4
-Hallo
+<pre>0 x 20000
+0 x 10000
+0 x 5000
+0 x 2000
+0 x 1000
+0 x 500
+1 x 200
+0 x 100
+0 x 50
+1 x 20
+1 x 10
+0 x 5
+2 x 2
+0 x 1
 </pre>
 </div>
 </div>
@@ -13480,23 +14089,37 @@ Hallo
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Was passiert hier?</strong></p>
+<h2 id="Aufgabe:-Wechselgeld-mit-M&#252;nzbestand">Aufgabe: Wechselgeld mit M&#252;nzbestand<a class="anchor-link" href="#Aufgabe:-Wechselgeld-mit-M&#252;nzbestand">&#182;</a></h2><p>Erweitern Sie das Programm aus der vorherigen Aufgabe so, dass jeweils berücksichtigt wird, ob die benötigten Münzen und Scheine in der entsprechenden Menge vorhanden sind. Sonst müssen diese durch die nächstkleinere Größe ersetzt werden.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">muenzen_und_scheine</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span>
+                       <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
+<span class="n">muenzen_und_scheine</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">bestand</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;20&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;50&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+           <span class="s1">&#39;100&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+           <span class="s1">&#39;500&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;1000&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;2000&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;5000&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;10000&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;20000&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">rechnungsbetrag</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Rechnungsbetrag in Euro? &#39;</span><span class="p">))</span>
+<span class="n">zahlbetrag</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Gezahlter Betrag? &#39;</span><span class="p">))</span>
+
+<span class="c1"># Hier einfügen</span>
 </pre></div>
 
     </div>
@@ -13513,11 +14136,8 @@ Hallo
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-4
-Hallo
+<pre>Rechnungsbetrag in Euro? 3.99
+Gezahlter Betrag? 210
 </pre>
 </div>
 </div>
@@ -13525,23 +14145,33 @@ Hallo
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="range-als-Iterable"><code>range</code> als Iterable<a class="anchor-link" href="#range-als-Iterable">&#182;</a></h2><p>Manchmal möchte man eine Schleife auf eine bestimmte Folge an Zahlen anwenden.</p>
-<p><code>range()</code> ist eine Hilfsfunktion, mit er ein Hilfsobjekt erzeugt werden kann, das eine bestimte Folge an Ganzzahlen liefert, über die eine Schleife ablaufen soll.</p>
-
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wechselgeld_betrag</span> <span class="o">=</span> <span class="n">zahlbetrag</span> <span class="o">-</span> <span class="n">rechnungsbetrag</span>
+<span class="n">wechselgeld_betrag</span> <span class="o">=</span> <span class="n">wechselgeld_betrag</span> <span class="o">*</span> <span class="mi">100</span>  <span class="c1"># in Cent</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">muenzen_und_scheine</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">wechselgeld_betrag</span> <span class="o">&gt;=</span> <span class="n">item</span><span class="p">:</span>
+        <span class="n">anzahl</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">wechselgeld_betrag</span> <span class="o">//</span> <span class="n">item</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">bestand</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span> <span class="o">&gt;=</span> <span class="n">anzahl</span><span class="p">:</span>
+            <span class="n">bestand</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span> <span class="o">=</span> <span class="n">bestand</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span> <span class="o">-</span> <span class="n">anzahl</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">anzahl</span> <span class="o">=</span> <span class="n">bestand</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span>
+            <span class="n">bestand</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">anzahl</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+        <span class="n">wechselgeld_betrag</span> <span class="o">=</span> <span class="n">wechselgeld_betrag</span> <span class="o">-</span> <span class="n">item</span> <span class="o">*</span> <span class="n">anzahl</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0 x&#39;</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13558,238 +14188,20 @@ Hallo
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Anfangswert-und-obere-Schranke">Anfangswert und obere Schranke<a class="anchor-link" href="#Anfangswert-und-obere-Schranke">&#182;</a></h3><p>Wenn zwei Parameter angegeben werden, ist der erste Wert die erste zu erzeugende Zahl und das zweite die obere Schranke, die gerade <strong>nicht mehr</strong> enthalten sein soll.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>4
-5
-6
-7
-8
-9
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Schrittweite">Schrittweite<a class="anchor-link" href="#Schrittweite">&#182;</a></h3><p>Durch Angabe eines dritten Parameters kann die Schrittweite spezifiziert werden. So wird z.B. nur jede zweite Zahl von 0 bis 7 erzeugt:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-2
-4
-6
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Das funktioniert auch mit negativen Schrittweiten. Dann allerdings muss man darauf achten, dass <strong>der Startwert (hier 5) größer ist als die obere Schranke (hier 0).</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-4
-3
-2
-1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Schleifen-mit-einer-nicht-ganzzahligen-Schrittweite">Schleifen mit einer nicht-ganzzahligen Schrittweite<a class="anchor-link" href="#Schleifen-mit-einer-nicht-ganzzahligen-Schrittweite">&#182;</a></h3><p>Manchmal möchte man eine Schleife über Zahlenfolgen ausführen, die eine Schrittweite verwenden, die nicht ganzzahlig ist, z.B. die Folge $[1,0; 1,1; 1.2]$.</p>
-<p><code>range()</code> funktioniert nur für ganze Zahlen.</p>
-<p>Es gibt drei Wege, wie man dies umgehen kann:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Skalierung-mit-einem-Faktor">Skalierung mit einem Faktor<a class="anchor-link" href="#Skalierung-mit-einem-Faktor">&#182;</a></h4><p>Man kann einfach die gewünschte Zahlenfolge um einen festen Faktor vergrößern und den Wert dann im Innern der Schleife ggfls. durch diesen Faktor teilen. Im Beispiel würde man also über <code>[10, 11, 12]</code> iterieren:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.0
-1.1
-1.2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Erzeugen-einer-Liste-aus-Gleitkommazahlen">Erzeugen einer Liste aus Gleitkommazahlen<a class="anchor-link" href="#Erzeugen-einer-Liste-aus-Gleitkommazahlen">&#182;</a></h4><p>Man kann die Liste, über die die Schleife ablaufen soll, auch vorab manuell erzeugen.</p>
-<p><strong>Beispiel:</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahlen</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
-    <span class="n">zahlen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">zahlen</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[1.0, 1.1, 1.2]
+<pre>0 x 20000
+1 x 10000
+2 x 5000
+0 x 2000
+0 x 1000
+1 x 500
+0 x 200
+1 x 100
+0 x 50
+0 x 20
+0 x 10
+0 x 5
+0 x 2
+1 x 1
 </pre>
 </div>
 </div>
@@ -13798,109 +14210,361 @@ Hallo
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="n">zahlen</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1.0
-1.1
-1.2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In der Praxis verwendet man dafür sogenannte <em>List Comprehensions</em>, eine Kurzform, um Listen über eine Schleife zu erstellen.
-Das Beispiel von oben sähe dann so aus:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahlen</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">zahlen</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[1.0, 1.1, 1.2]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Spezialfunktionen-aus-der-Bibliothek-numpy">Spezialfunktionen aus der Bibliothek <code>numpy</code><a class="anchor-link" href="#Spezialfunktionen-aus-der-Bibliothek-numpy">&#182;</a></h4><p>In der Bibliothek <code>numpy</code> gibt es spezielle Funktionen, um Zahlenfolgen aus nicht-ganzzahligen Werten zu erzeugen.</p>
-<p>Diese sind nicht Gegenstand der Vorlesung und werden hier nur der Vollständigkeit halber genannt.</p>
+<h2 id="Aufgabe:-Taxikosten">Aufgabe: Taxikosten<a class="anchor-link" href="#Aufgabe:-Taxikosten">&#182;</a></h2><p>Nehmen Sie an, der Preis für ein Taxi bestehe aus</p>
 <ul>
-<li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html">numpy.arange</a></li>
-<li><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html">numpy.linspace</a></li>
+<li>einem Grundpreis von 2,50 Euro und</li>
+<li>einem kilometerabhängigen Preis von 4 Euro pro Kilometer.</li>
+</ul>
+<p>Schreiben Sie ein Python-Programm, das eine Preistabelle für alle Strecken zwischen 1 und 10 km ausgibt.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe:-Preistabelle">Aufgabe: Preistabelle<a class="anchor-link" href="#Aufgabe:-Preistabelle">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grundpreis</span> <span class="o">=</span> <span class="mf">2.50</span>  <span class="c1"># Euro</span>
+<span class="n">preis_pro_km</span> <span class="o">=</span> <span class="mf">4.0</span>  <span class="c1"># Euro</span>
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">strecke</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">strecke</span><span class="p">,</span> <span class="s1">&#39;km kosten&#39;</span><span class="p">,</span> <span class="n">grundpreis</span> <span class="o">+</span> <span class="n">strecke</span> <span class="o">*</span> <span class="n">preis_pro_km</span><span class="p">,</span> <span class="s1">&#39;Euro.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 km kosten 6.5 Euro.
+2 km kosten 10.5 Euro.
+3 km kosten 14.5 Euro.
+4 km kosten 18.5 Euro.
+5 km kosten 22.5 Euro.
+6 km kosten 26.5 Euro.
+7 km kosten 30.5 Euro.
+8 km kosten 34.5 Euro.
+9 km kosten 38.5 Euro.
+10 km kosten 42.5 Euro.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe:-Erweiterung:-Rabatt-ab-10-km">Aufgabe: Erweiterung: Rabatt ab 10 km<a class="anchor-link" href="#Aufgabe:-Erweiterung:-Rabatt-ab-10-km">&#182;</a></h3><p>Erweitern Sie das Programm derart, dass der kilometerabhängige Preis ab dem
+fünften Kilometer auf 3 Euro pro Kilometer sinkt.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grundpreis</span> <span class="o">=</span> <span class="mf">2.50</span>  <span class="c1"># Euro</span>
+<span class="n">preis_pro_km</span> <span class="o">=</span> <span class="mf">4.0</span> <span class="c1"># Euro</span>
+<span class="n">preis_pro_km_reduziert</span> <span class="o">=</span> <span class="mf">3.0</span>  <span class="c1"># Euro</span>
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">strecke</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">strecke</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">strecke</span><span class="p">,</span> <span class="s1">&#39;km kosten&#39;</span><span class="p">,</span> <span class="n">grundpreis</span> <span class="o">+</span> <span class="n">strecke</span> <span class="o">*</span> <span class="n">preis_pro_km</span><span class="p">,</span> <span class="s1">&#39;Euro.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">strecke</span><span class="p">,</span> <span class="s1">&#39;km kosten&#39;</span><span class="p">,</span> 
+              <span class="n">grundpreis</span> <span class="o">+</span> <span class="n">preis_pro_km</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="p">(</span><span class="n">strecke</span> <span class="o">-</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">preis_pro_km_reduziert</span><span class="p">,</span> 
+              <span class="s1">&#39;Euro.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 km kosten 6.5 Euro.
+2 km kosten 10.5 Euro.
+3 km kosten 14.5 Euro.
+4 km kosten 18.5 Euro.
+5 km kosten 21.5 Euro.
+6 km kosten 24.5 Euro.
+7 km kosten 27.5 Euro.
+8 km kosten 30.5 Euro.
+9 km kosten 33.5 Euro.
+10 km kosten 36.5 Euro.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Erweiterung:-Benutzereingabe-und-Aufrunden-auf-Abrechnungseinheiten">Erweiterung: Benutzereingabe und Aufrunden auf Abrechnungseinheiten<a class="anchor-link" href="#Erweiterung:-Benutzereingabe-und-Aufrunden-auf-Abrechnungseinheiten">&#182;</a></h3><p>Verändern Sie das Programm so, dass die Länge der Fahrt vom Programmbenutzer
+erfragt wird und der kilometerabhängige Preis nur in Einheiten von 500 m – mit
+Aufrunden – berechnet wird (Beispiel: Bei 3,25 km werden 3,5 km berechnet).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Telefongeb&#252;hren">Aufgabe: Telefongeb&#252;hren<a class="anchor-link" href="#Aufgabe:-Telefongeb&#252;hren">&#182;</a></h2><p>Schreiben Sie ein Programm, das aus folgenden Verbindungsdaten eine
+Telefonrechnung erstellt:</p>
+<table>
+<thead><tr>
+<th>Zielrufnummer</th>
+<th>Verbindungsdauer (sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>+49896004-0|30
++4969123456|120
++43152000|50
++352989104-7|20
++49896004-0|68</p>
+<p>Alle Gespräche im Ortsbereich (beginnend mit "+4989") kosten 0,01 Euro pro
+Sekunde. Alle Gespräche innerhalb Deutschlands (beginnend mit "+49") kosten 0,04
+Euro pro Sekunde. Alle übrigen Gespräche sind internationale Verbindungen und kosten
+0,12 Euro pro Sekunde</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">verbindungdaten</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;+49896004-0&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+                   <span class="p">(</span><span class="s1">&#39;+4969123456&#39;</span><span class="p">,</span> <span class="mi">120</span><span class="p">),</span> 
+                   <span class="p">(</span><span class="s1">&#39;+43152000&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+                   <span class="p">(</span><span class="s1">&#39;+352989104-7&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+                   <span class="p">(</span><span class="s1">&#39;+49896004-0&#39;</span><span class="p">,</span> <span class="mi">68</span><span class="p">)]</span>
+<span class="n">preis_ort</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># Euro pro Sekunde</span>
+<span class="n">preis_inland</span> <span class="o">=</span> <span class="mf">0.04</span>  <span class="c1"># Euro pro Sekunde</span>
+<span class="n">preis_ausland</span> <span class="o">=</span> <span class="mf">0.12</span>  <span class="c1"># Euro pro Sekunde</span>
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rechnungssumme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">verbindungdaten</span><span class="p">:</span>
+    <span class="n">nummer</span><span class="p">,</span> <span class="n">dauer</span> <span class="o">=</span> <span class="n">item</span>
+    <span class="k">if</span> <span class="n">nummer</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+4989&#39;</span><span class="p">):</span>
+        <span class="n">betrag</span> <span class="o">=</span> <span class="n">dauer</span> <span class="o">*</span> <span class="n">preis_ort</span>
+    <span class="k">elif</span> <span class="n">nummer</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;+49&#39;</span><span class="p">):</span>
+        <span class="n">betrag</span> <span class="o">=</span> <span class="n">dauer</span> <span class="o">*</span> <span class="n">preis_inland</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">betrag</span> <span class="o">=</span> <span class="n">dauer</span> <span class="o">*</span> <span class="n">preis_ausland</span>
+    <span class="n">rechnungssumme</span> <span class="o">=</span> <span class="n">rechnungssumme</span> <span class="o">+</span> <span class="n">betrag</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Rufnummer: &#39;</span><span class="p">,</span> <span class="n">nummer</span><span class="p">,</span> <span class="s1">&#39; Dauer:&#39;</span><span class="p">,</span> <span class="n">dauer</span><span class="p">,</span> <span class="s1">&#39;Betrag:&#39;</span><span class="p">,</span> <span class="n">betrag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gesamtbetrag:&#39;</span><span class="p">,</span> <span class="n">rechnungssumme</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Rufnummer:  +49896004-0  Dauer: 30 Betrag: 0.3
+Rufnummer:  +4969123456  Dauer: 120 Betrag: 4.8
+Rufnummer:  +43152000  Dauer: 50 Betrag: 6.0
+Rufnummer:  +352989104-7  Dauer: 20 Betrag: 2.4
+Rufnummer:  +49896004-0  Dauer: 68 Betrag: 0.68
+Gesamtbetrag: 14.18
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Pr&#252;fen-Sie,-ob-eine-Zeichenkette-ein-Palindrom-ist.">Aufgabe: Pr&#252;fen Sie, ob eine Zeichenkette ein Palindrom ist.<a class="anchor-link" href="#Aufgabe:-Pr&#252;fen-Sie,-ob-eine-Zeichenkette-ein-Palindrom-ist.">&#182;</a></h2><p>Ein <a href="https://de.wikipedia.org/wiki/Palindrom">Palindrom ist ein Wort, das vorwärts und rückwärts gelesen dieselbe Zeichenfolge hat</a>.</p>
+<p><strong>Beispiele:</strong></p>
+<ul>
+<li>ABBA</li>
+<li>OTTO</li>
+<li>LAGER</li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#220;bung">&#220;bung<a class="anchor-link" href="#&#220;bung">&#182;</a></h2><p>Geben Sie alle Zweierpotenzen von $2^0$ bis $2^7$ aus.</p>
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3><p>Schreiben Sie ein Programm, das für eine gegebene Zeichenkette prüft, ob sie ein Palindrom ist.</p>
 
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">exponent</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2 hoch&#39;</span><span class="p">,</span> <span class="n">exponent</span><span class="p">,</span> <span class="s1">&#39;ist gleich&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="n">exponent</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;FRANZ&#39;</span>
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Leichter verständliche Lösung</span>
+<span class="n">text_gespiegelt</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="n">text_gespiegelt</span> <span class="o">=</span> <span class="n">char</span> <span class="o">+</span> <span class="n">text_gespiegelt</span>
+<span class="k">if</span> <span class="n">text_gespiegelt</span> <span class="o">==</span> <span class="n">text</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{text}</span><span class="s1"> ist ein Palindrom.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{text}</span><span class="s1"> ist kein Palindrom, </span><span class="si">{text}</span><span class="s1"> != </span><span class="si">{text_gespiegelt}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13917,14 +14581,7 @@ Das Beispiel von oben sähe dann so aus:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2 hoch 0 ist gleich 1
-2 hoch 1 ist gleich 2
-2 hoch 2 ist gleich 4
-2 hoch 3 ist gleich 8
-2 hoch 4 ist gleich 16
-2 hoch 5 ist gleich 32
-2 hoch 6 ist gleich 64
-2 hoch 7 ist gleich 128
+<pre>FRANZ ist kein Palindrom, FRANZ != ZNARF
 </pre>
 </div>
 </div>
@@ -13932,24 +14589,25 @@ Das Beispiel von oben sähe dann so aus:</p>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Schleifen-mit-while">Schleifen mit <code>while</code><a class="anchor-link" href="#Schleifen-mit-while">&#182;</a></h2>
+<p><strong>Elegantere Lösung:</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obere_schranke</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">aktueller_wert</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">aktueller_wert</span> <span class="o">&lt;</span> <span class="n">obere_schranke</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">aktueller_wert</span><span class="p">)</span>
-    <span class="n">aktueller_wert</span> <span class="o">=</span> <span class="n">aktueller_wert</span> <span class="o">*</span> <span class="mi">2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># text[::-1] liefert eine Zeichenkette in umgekehrter Reihenfolge zurück</span>
+<span class="k">if</span> <span class="n">text</span> <span class="o">==</span> <span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Palindrom&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kein Palidrom&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13966,13 +14624,7 @@ Das Beispiel von oben sähe dann so aus:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-4
-8
-16
-32
-64
+<pre>Palindrom
 </pre>
 </div>
 </div>
@@ -13980,26 +14632,385 @@ Das Beispiel von oben sähe dann so aus:</p>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Schleifenabbruch-mit-break">Schleifenabbruch mit <code>break</code><a class="anchor-link" href="#Schleifenabbruch-mit-break">&#182;</a></h3><p>Man kann eine while-Schleife mit der Anweisung <code>break</code> verlassen:</p>
+<h2 id="Aufgabe:-Einfache-Verschl&#252;sselung-(Zeichensubstitution)">Aufgabe: Einfache Verschl&#252;sselung (Zeichensubstitution)<a class="anchor-link" href="#Aufgabe:-Einfache-Verschl&#252;sselung-(Zeichensubstitution)">&#182;</a></h2><p>Schreiben Sie ein Programm, das eine beliebige Folge von Ziffern, die als Zeichenkette übergeben wird, in eine verschlüsselte Form übersetzt, indem jede Ziffer gemäß der folgenden Tabelle ersetzt wird:</p>
+<table>
+<thead><tr>
+<th>Ziffer</th>
+<th>Verschlüsselte Ziffer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+</tr>
+<tr>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>9</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># schluessel ist zufällige Liste aller Ziffern</span>
+<span class="n">schluessel</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Verschlüsselung</span>
+<span class="n">meine_pin</span> <span class="o">=</span> <span class="s1">&#39;20191106&#39;</span>
+<span class="n">chiffrat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">ziffer</span> <span class="ow">in</span> <span class="n">meine_pin</span><span class="p">:</span>
+    <span class="n">neue_ziffer</span> <span class="o">=</span> <span class="n">schluessel</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">ziffer</span><span class="p">)]</span>
+    <span class="n">chiffrat</span> <span class="o">=</span> <span class="n">chiffrat</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">neue_ziffer</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Verschlüsselte Form:&#39;</span><span class="p">,</span> <span class="n">chiffrat</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Verschlüsselte Form: 14939942
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Enschlüsselung:</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;7 erreicht, beende die Schleife&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl_dekodiert</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">for</span> <span class="n">ziffer</span> <span class="ow">in</span> <span class="n">chiffrat</span><span class="p">:</span>
+    <span class="n">urspruengliche_ziffer</span> <span class="o">=</span> <span class="n">schluessel</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ziffer</span><span class="p">))</span>
+    <span class="n">zahl_dekodiert</span> <span class="o">=</span> <span class="n">zahl_dekodiert</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">urspruengliche_ziffer</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dekodiert:&#39;</span><span class="p">,</span> <span class="n">zahl_dekodiert</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dekodiert: 20191106
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Analyse-der-Buchstabenh&#228;ufigkeit">Aufgabe: Analyse der Buchstabenh&#228;ufigkeit<a class="anchor-link" href="#Aufgabe:-Analyse-der-Buchstabenh&#228;ufigkeit">&#182;</a></h2><p>Zählen Sie die Häufigkeit der einzelnen Buchstaben im folgenden Text:</p>
+<p><em>Im Bewußtsein seiner Verantwortung vor Gott und den Menschen,
+von dem Willen beseelt, als gleichberechtigtes Glied in einem vereinten Europa dem Frieden der Welt zu dienen, hat sich das Deutsche Volk kraft seiner verfassungsgebenden Gewalt dieses Grundgesetz gegeben.
+Die Deutschen in den Ländern Baden-Württemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein und Thüringen haben in freier Selbstbestimmung die Einheit und Freiheit Deutschlands vollendet. Damit gilt dieses Grundgesetz für das gesamte Deutsche Volk.</em></p>
+<p><strong>Tipp:</strong> Nutzen Sie ein Dictionary, um die Buchstaben und ihre Häufigkeit zu speichern. Dabei sollte der Buchstabe der Schlüssel für einen Eintrag sein.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Im Bewußtsein seiner Verantwortung vor Gott und den Menschen,</span>
+<span class="s2">von dem Willen beseelt, als gleichberechtigtes Glied in einem vereinten Europa </span>
+<span class="s2">dem Frieden der Welt zu dienen, hat sich das Deutsche Volk kraft seiner </span>
+<span class="s2">verfassungsgebenden Gewalt dieses Grundgesetz gegeben.</span>
+<span class="s2">Die Deutschen in den Ländern Baden-Württemberg, Bayern, Berlin, Brandenburg, </span>
+<span class="s2">Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, </span>
+<span class="s2">Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein und Thüringen </span>
+<span class="s2">haben in freier Selbstbestimmung die Einheit und Freiheit Deutschlands vollendet. </span>
+<span class="s2">Damit gilt dieses Grundgesetz für das gesamte Deutsche Volk.&quot;&quot;&quot;</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">haeufigkeiten</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+    <span class="c1"># Wir schließen Sonderzeichen und das Leerzeichen aus</span>
+    <span class="c1"># ord(&lt;zeichen&gt;) liefert den ASCII-Code eines Zeichens</span>
+    <span class="c1"># Das ist nur eine Verfeinerung</span>
+    <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">32</span><span class="p">:</span>
+        <span class="n">haeufigkeiten</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="o">=</span> <span class="n">haeufigkeiten</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">haeufigkeiten</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;I&#39;: 35, &#39;M&#39;: 15, &#39;B&#39;: 17, &#39;E&#39;: 98, &#39;W&#39;: 8, &#39;U&#39;: 18, &#39;S&#39;: 43, &#39;T&#39;: 33, &#39;N&#39;: 60, &#39;R&#39;: 36, &#39;V&#39;: 9, &#39;A&#39;: 28, &#39;O&#39;: 12, &#39;G&#39;: 23, &#39;D&#39;: 34, &#39;C&#39;: 13, &#39;H&#39;: 23, &#39;,&#39;: 17, &#39;L&#39;: 25, &#39;P&#39;: 3, &#39;F&#39;: 8, &#39;Z&#39;: 4, &#39;K&#39;: 4, &#39;.&#39;: 3, &#39;Ä&#39;: 1, &#39;-&#39;: 6, &#39;Ü&#39;: 3, &#39;Y&#39;: 1}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Hinweis:</strong> Das Sortieren eines Dictionaries nach Werten ist nicht-trivial und wird hier nicht behandelt.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bonus:-Visualisierung-der-Buchstabenh&#228;ufigkeit">Bonus: Visualisierung der Buchstabenh&#228;ufigkeit<span class="tocSkip" /><a class="anchor-link" href="#Bonus:-Visualisierung-der-Buchstabenh&#228;ufigkeit">&#182;</a></h4><p>Bitte ignorieren Sie den Programmcode, er ist für diese Vorlesung zu kompliziert.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">haeufigkeiten</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">freq</span><span class="p">:</span> <span class="n">freq</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">data</span><span class="p">)</span> <span class="c1"># unpack a list of pairs into two tuples</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="uebungen_2_files/uebungen_2_98_0.png"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Aufgabe:-Bin&#228;re-Suche-(anspruchsvoll)">Aufgabe: Bin&#228;re Suche (anspruchsvoll)<a class="anchor-link" href="#Aufgabe:-Bin&#228;re-Suche-(anspruchsvoll)">&#182;</a></h2><p>Die binäre Suche ist ein sehr effizienter Algorithmus, um in einer sortierten Liste von Objekten zu suchen. Dabei wird zunächst in der Mitte der Liste geprüft, ob der gesuchte Eintrag genau dort, unterhalb oder oberhalb liegt.</p>
+<p>Anschließend wird die Liste halbiert und nur noch in der relevanten Teilliste weiter gesucht.</p>
+<p>Dies wird wiederholt, bis das Element gefunden wurde oder die Liste erfolglos durchsucht wurde.</p>
+<p>Für Details lesen bitte Sie den <a href="https://de.wikipedia.org/wiki/Bin%C3%A4re_Suche">Wikipedia-Artikel zur binären Suche</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">daten</span> <span class="o">=</span> <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">77</span><span class="p">]</span>
+<span class="n">daten</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1"># Wir müssen mit einer zweiten Variablen arbeiten, sonst werden die Eingangsdaten</span>
+<span class="c1"># bei der Verarbeitung ggfls. verändert.</span>
+<span class="n">liste</span> <span class="o">=</span> <span class="n">daten</span>  
+
+<span class="c1"># Hier einfügen</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gesuchter_wert</span> <span class="o">=</span> <span class="mi">39</span>
+
+<span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">suchposition</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="c1"># Die folgende Zeile können Sie ignorieren.</span>
+    <span class="c1"># Sie verdeutlicht nur den Suchvorgang.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Suche in Teilliste {str(liste[:suchposition])[:-1]}, *</span><span class="si">{liste[suchposition]}</span><span class="s1">*, {str(liste[suchposition + 1:])[1:]}&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">liste</span><span class="p">[</span><span class="n">suchposition</span><span class="p">]</span> <span class="o">==</span> <span class="n">gesuchter_wert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wert gefunden, Position: &#39;</span><span class="p">,</span> <span class="n">position</span> <span class="o">+</span> <span class="n">suchposition</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">liste</span><span class="p">[</span><span class="n">suchposition</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">gesuchter_wert</span><span class="p">:</span>
+        <span class="n">position</span> <span class="o">+=</span> <span class="n">suchposition</span>
+        <span class="n">liste</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">suchposition</span><span class="p">:]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">liste</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[:</span><span class="n">suchposition</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">gesuchter_wert</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wert nicht gefunden.&#39;</span><span class="p">)</span>
         <span class="k">break</span>
 </pre></div>
 
@@ -14017,14 +15028,11 @@ Das Beispiel von oben sähe dann so aus:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-4
-5
-6
-7
-7 erreicht, beende die Schleife
+<pre>Suche in Teilliste [5, 12, 23, 26, 29, 34, 39, *40*, 44, 49, 77, 78, 83, 88, 93]
+Suche in Teilliste [5, 12, 23, *26*, 29, 34, 39]
+Suche in Teilliste [26, 29, *34*, 39]
+Suche in Teilliste [34, *39*, ]
+Wert gefunden, Position:  6
 </pre>
 </div>
 </div>
@@ -14032,30 +15040,81 @@ Das Beispiel von oben sähe dann so aus:</p>
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Verzweigungen">Verzweigungen<a class="anchor-link" href="#Verzweigungen">&#182;</a></h1>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Einfache-Verzweigung-mit-if">Einfache Verzweigung mit <code>if</code><a class="anchor-link" href="#Einfache-Verzweigung-mit-if">&#182;</a></h2>
+<h2 id="Aufgabe:-Traveling-Salesman-Problem-(anspruchsvoll)">Aufgabe: Traveling Salesman Problem (anspruchsvoll)<a class="anchor-link" href="#Aufgabe:-Traveling-Salesman-Problem-(anspruchsvoll)">&#182;</a></h2><p>Das <a href="https://de.wikipedia.org/wiki/Problem_des_Handlungsreisenden">Problem des Handlungsreisenden</a> ist eines der wichtigsten klassischen Probleme der Logistik. Das Ziel ist es, aus einer Liste von Orten und einer Matrix der Entfernungen zwischen den Orten die kürzeste Route zu finden, die alle Orte genau einmal besucht.</p>
+<p>Die optimale Lösung ist nur durch hohen Rechenaufwand zu finden, sobald die Anzahl der Orte auch nur moderat groß ist.</p>
+<p>In der Praxis greift man daher auf Heuristiken zu, wie z.B. den <a href="https://de.wikipedia.org/wiki/Nearest-Neighbor-Heuristik">Nearest-Neighbor-Algorithmus</a>. Hierbei wird einfach von einem Startknoten stets der am nächsten gelegene Ort angesteuert. Dies führt stets zu einer gültigen Lösung, die aber weit vom Optimum entfernt sein kann kann.</p>
+<p>Gegeben sei folgende Entfernungsmatrix:</p>
+<table>
+<thead><tr>
+<th>&nbsp;</th>
+<th>Bielefeld</th>
+<th>Frankfurt</th>
+<th>München</th>
+<th>Karlsruhe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bielefeld</td>
+<td>0</td>
+<td>400</td>
+<td>700</td>
+<td>600</td>
+</tr>
+<tr>
+<td>Frankfurt</td>
+<td>400</td>
+<td>0</td>
+<td>400</td>
+<td>300</td>
+</tr>
+<tr>
+<td>München</td>
+<td>700</td>
+<td>400</td>
+<td>0</td>
+<td>350</td>
+</tr>
+<tr>
+<td>Karlsruhe</td>
+<td>600</td>
+<td>400</td>
+<td>350</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Vollst&#228;ndige-L&#246;sung-(&quot;brute-force&quot;)">Vollst&#228;ndige L&#246;sung ("brute force")<a class="anchor-link" href="#Vollst&#228;ndige-L&#246;sung-(&quot;brute-force&quot;)">&#182;</a></h3><p>Die Erzeugung aller möglichen Permutationen (Kombinationen) ist nicht ganz trivial, daher verzichten wir hier darauf. Es gibt aber in Python eine fertige Funktion, um alle Kombinationen aus einer Liste zu erzeugen:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wert</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Geben Sie eine Zahl ein. &#39;</span><span class="p">)</span>
-<span class="n">wert</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">wert</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">wert</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">wert</span><span class="p">,</span> <span class="s1">&#39;ist größer als Null.&#39;</span><span class="p">)</span>   
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">staedte</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bielefeld&#39;</span><span class="p">,</span> <span class="s1">&#39;Frankfurt&#39;</span><span class="p">,</span> <span class="s1">&#39;München&#39;</span><span class="p">,</span> <span class="s1">&#39;Karlsruhe&#39;</span><span class="p">]</span>
+
+<span class="n">startort</span> <span class="o">=</span> <span class="n">staedte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">permutations</span> 
+<span class="n">routen</span> <span class="o">=</span> <span class="n">permutations</span><span class="p">(</span><span class="n">staedte</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="n">rundtouren</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">route</span> <span class="ow">in</span> <span class="n">routen</span><span class="p">:</span>
+    <span class="n">rundtour</span> <span class="o">=</span> <span class="p">(</span><span class="n">startort</span><span class="p">,)</span> <span class="o">+</span> <span class="n">route</span> <span class="o">+</span> <span class="p">(</span><span class="n">startort</span><span class="p">,)</span>
+    <span class="n">rundtouren</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rundtour</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rundtouren</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14072,8 +15131,7 @@ Das Beispiel von oben sähe dann so aus:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Geben Sie eine Zahl ein. 4
-4 ist größer als Null.
+<pre>[(&#39;Bielefeld&#39;, &#39;Frankfurt&#39;, &#39;München&#39;, &#39;Karlsruhe&#39;, &#39;Bielefeld&#39;), (&#39;Bielefeld&#39;, &#39;Frankfurt&#39;, &#39;Karlsruhe&#39;, &#39;München&#39;, &#39;Bielefeld&#39;), (&#39;Bielefeld&#39;, &#39;München&#39;, &#39;Frankfurt&#39;, &#39;Karlsruhe&#39;, &#39;Bielefeld&#39;), (&#39;Bielefeld&#39;, &#39;München&#39;, &#39;Karlsruhe&#39;, &#39;Frankfurt&#39;, &#39;Bielefeld&#39;), (&#39;Bielefeld&#39;, &#39;Karlsruhe&#39;, &#39;Frankfurt&#39;, &#39;München&#39;, &#39;Bielefeld&#39;), (&#39;Bielefeld&#39;, &#39;Karlsruhe&#39;, &#39;München&#39;, &#39;Frankfurt&#39;, &#39;Bielefeld&#39;)]
 </pre>
 </div>
 </div>
@@ -14081,25 +15139,41 @@ Das Beispiel von oben sähe dann so aus:</p>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Verzweigung-mit-if-und-else">Verzweigung mit <code>if</code> und <code>else</code><a class="anchor-link" href="#Verzweigung-mit-if-und-else">&#182;</a></h2>
+<p><strong>Nun können Sie die Länge dieser Touren berechnen.</strong></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wert</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Geben Sie eine Zahl ein. &#39;</span><span class="p">)</span>
-<span class="n">wert</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">wert</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">wert</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">wert</span><span class="p">,</span> <span class="s1">&#39;ist größer als Null.&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">wert</span><span class="p">,</span> <span class="s1">&#39;ist kleiner oder gleich Null.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dictionaries mit Entfernungen</span>
+<span class="n">bielefeld</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bielefeld&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Frankfurt&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;München&#39;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span> <span class="s1">&#39;Karlsruhe&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">}</span>
+<span class="n">frankfurt</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bielefeld&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;Frankfurt&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;München&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;Karlsruhe&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="n">muenchen</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bielefeld&#39;</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span> <span class="s1">&#39;Frankfurt&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;München&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Karlsruhe&#39;</span><span class="p">:</span> <span class="mi">350</span><span class="p">}</span>
+<span class="n">karlsruhe</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bielefeld&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span> <span class="s1">&#39;Frankfurt&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s1">&#39;München&#39;</span><span class="p">:</span> <span class="mi">350</span><span class="p">,</span> <span class="s1">&#39;Karlsruhe&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="c1"># Dictionary, das für einen Städtenamen das passende Dictionary speichert</span>
+<span class="n">entfernungen</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Bielefeld&#39;</span><span class="p">:</span> <span class="n">bielefeld</span><span class="p">,</span>
+                <span class="s1">&#39;Frankfurt&#39;</span><span class="p">:</span> <span class="n">frankfurt</span><span class="p">,</span>
+                <span class="s1">&#39;München&#39;</span><span class="p">:</span> <span class="n">muenchen</span><span class="p">,</span>
+                <span class="s1">&#39;Karlsruhe&#39;</span><span class="p">:</span> <span class="n">karlsruhe</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">route</span> <span class="ow">in</span> <span class="n">rundtouren</span><span class="p">:</span>
+    <span class="n">laenge</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">restroute</span> <span class="o">=</span> <span class="n">route</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">restroute</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># Wie weit ist es vom aktuellen Ort zum nächsten?</span>
+        <span class="n">aktueller_ort</span> <span class="o">=</span> <span class="n">restroute</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">naechster_ort</span> <span class="o">=</span> <span class="n">restroute</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">laenge</span> <span class="o">+=</span> <span class="n">entfernungen</span><span class="p">[</span><span class="n">aktueller_ort</span><span class="p">][</span><span class="n">naechster_ort</span><span class="p">]</span>
+        <span class="n">restroute</span> <span class="o">=</span> <span class="n">restroute</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">route</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">laenge</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14116,8 +15190,12 @@ Das Beispiel von oben sähe dann so aus:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Geben Sie eine Zahl ein. 4
-4 ist größer als Null.
+<pre>(&#39;Bielefeld&#39;, &#39;Frankfurt&#39;, &#39;München&#39;, &#39;Karlsruhe&#39;, &#39;Bielefeld&#39;) -&gt; 1750
+(&#39;Bielefeld&#39;, &#39;Frankfurt&#39;, &#39;Karlsruhe&#39;, &#39;München&#39;, &#39;Bielefeld&#39;) -&gt; 1750
+(&#39;Bielefeld&#39;, &#39;München&#39;, &#39;Frankfurt&#39;, &#39;Karlsruhe&#39;, &#39;Bielefeld&#39;) -&gt; 2000
+(&#39;Bielefeld&#39;, &#39;München&#39;, &#39;Karlsruhe&#39;, &#39;Frankfurt&#39;, &#39;Bielefeld&#39;) -&gt; 1850
+(&#39;Bielefeld&#39;, &#39;Karlsruhe&#39;, &#39;Frankfurt&#39;, &#39;München&#39;, &#39;Bielefeld&#39;) -&gt; 2100
+(&#39;Bielefeld&#39;, &#39;Karlsruhe&#39;, &#39;München&#39;, &#39;Frankfurt&#39;, &#39;Bielefeld&#39;) -&gt; 1750
 </pre>
 </div>
 </div>
@@ -14125,27 +15203,35 @@ Das Beispiel von oben sähe dann so aus:</p>
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Mehrfachverzweigung-mit-if,-elif-und-else">Mehrfachverzweigung mit <code>if</code>, <code>elif</code> und <code>else</code><a class="anchor-link" href="#Mehrfachverzweigung-mit-if,-elif-und-else">&#182;</a></h2>
+<h3 id="Nearest-Neighbor-Verfahren">Nearest-Neighbor-Verfahren<a class="anchor-link" href="#Nearest-Neighbor-Verfahren">&#182;</a></h3><p>Beim Nearest-Neigbor-Algorithmus wird einfach von jedem Ort zum nächstgelegenen gefahren. Dies kann allerdings zu Routen führen, die weit entfernt vom Optimum liegen, weil die Strecke der letzten Rückfahrt nicht für die Entscheidung berücksichtigt wird.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wert</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Geben Sie eine Zahl ein. &#39;</span><span class="p">)</span>
-<span class="n">wert</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">wert</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">wert</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">wert</span><span class="p">,</span> <span class="s1">&#39;ist größer als Null.&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">wert</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">wert</span><span class="p">,</span> <span class="s1">&#39;ist gleich Null.&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">wert</span><span class="p">,</span> <span class="s1">&#39;ist kleiner als Null.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">startort</span> <span class="o">=</span> <span class="n">staedte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">tour</span> <span class="o">=</span> <span class="p">[</span><span class="n">startort</span><span class="p">]</span>
+<span class="n">ziele</span> <span class="o">=</span> <span class="n">staedte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">ziele</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">aktueller_ort</span> <span class="o">=</span> <span class="n">tour</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># letztes Element</span>
+    <span class="n">minimum</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ziel</span> <span class="ow">in</span> <span class="n">ziele</span><span class="p">:</span>
+        <span class="n">entfernung</span> <span class="o">=</span> <span class="n">entfernungen</span><span class="p">[</span><span class="n">aktueller_ort</span><span class="p">][</span><span class="n">ziel</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">entfernung</span> <span class="o">&lt;</span> <span class="n">minimum</span><span class="p">:</span>
+            <span class="n">nearest_neighbor</span> <span class="o">=</span> <span class="n">ziel</span>
+            <span class="n">minimum</span> <span class="o">=</span> <span class="n">entfernung</span>
+    <span class="c1"># Am Ende enthält nearest_neighbor den nächsten Ort und minimum die Entfernung dorthin.</span>
+    <span class="n">tour</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nearest_neighbor</span><span class="p">)</span>
+    <span class="n">ziele</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">nearest_neighbor</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tour</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14162,8 +15248,7 @@ Das Beispiel von oben sähe dann so aus:</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Geben Sie eine Zahl ein. -3
--3 ist kleiner als Null.
+<pre>[&#39;Bielefeld&#39;, &#39;Frankfurt&#39;, &#39;Karlsruhe&#39;, &#39;München&#39;]
 </pre>
 </div>
 </div>
@@ -14171,337 +15256,7 @@ Das Beispiel von oben sähe dann so aus:</p>
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fallstricke-bei-Mehrfachverzweigungen">Fallstricke bei Mehrfachverzweigungen<a class="anchor-link" href="#Fallstricke-bei-Mehrfachverzweigungen">&#182;</a></h2><p>Die Bedingungen müssen vom spezielleren Fall zu den allgemeineren Fällen geprüft werden, da nur der erste passende Zweig ausgeführt wird.</p>
-
 </div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="k">if</span> <span class="n">zahl</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Zahl ist größer als Null.&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">zahl</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Zahl größer als 2.&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Die Zahl ist größer als Null.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Die zweite Prüfung <code>elif zahl &gt; 2:</code> wird nicht mehr ausgeführt, weil die Bedingung für den ersten Zweig <code>if zahl &gt; 0:</code> bereits erfüllt ist.</p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Test,-ob-Wert-innerhalb-eines-Intervalls-liegt">Test, ob Wert innerhalb eines Intervalls liegt<a class="anchor-link" href="#Test,-ob-Wert-innerhalb-eines-Intervalls-liegt">&#182;</a></h2><p>Oft muss man prüfen, ob ein Wert innerhalb eines Intervals liegt.</p>
-<p><strong>Beispiel:</strong>
-$ 0 &lt; x &lt; 10 $</p>
-<p>In Python gibt es zwei Wege, dies auszudrücken:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="c1"># Logische Kombination mehrerer Vergleiche mit &#39;and&#39;</span>
-<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0 &lt; x &lt; 10&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0 &lt; x &lt; 10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="c1"># Direkter Ausdruck</span>
-<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0 &lt; x &lt; 10&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0 &lt; x &lt; 10
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Kombinationen">Kombinationen<a class="anchor-link" href="#Kombinationen">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Schleifen-in-Schleifen">Schleifen in Schleifen<a class="anchor-link" href="#Schleifen-in-Schleifen">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">faktor_1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">faktor_2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
-        <span class="c1"># end  = &#39;\t&#39; sorgt dafür, dass am Ende des Befehls</span>
-        <span class="c1"># keine neue Zeile, sondern ein Tabulatorzeichen folgt.</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">faktor_1</span> <span class="o">*</span> <span class="n">faktor_2</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1	2	3	4	5	6	7	8	9	10	
-2	4	6	8	10	12	14	16	18	20	
-3	6	9	12	15	18	21	24	27	30	
-4	8	12	16	20	24	28	32	36	40	
-5	10	15	20	25	30	35	40	45	50	
-6	12	18	24	30	36	42	48	54	60	
-7	14	21	28	35	42	49	56	63	70	
-8	16	24	32	40	48	56	64	72	80	
-9	18	27	36	45	54	63	72	81	90	
-10	20	30	40	50	60	70	80	90	100	
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Verzweigungen-in-Schleifen">Verzweigungen in Schleifen<a class="anchor-link" href="#Verzweigungen-in-Schleifen">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
-    <span class="c1"># zahl % 2 liefert den Divisionsrest bei einer ganzzahligen Division</span>
-    <span class="k">if</span> <span class="n">zahl</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">,</span> <span class="s1">&#39; ist gerade&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">,</span> <span class="s1">&#39; ist ungerade&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0  ist gerade
-1  ist ungerade
-2  ist gerade
-3  ist ungerade
-4  ist gerade
-5  ist ungerade
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#220;bung">&#220;bung<a class="anchor-link" href="#&#220;bung">&#182;</a></h2><p>Ein Sparkonto soll fünf Jahre lang jeden Monat mit 1 % verzinst werden. Am Ende jedes Jahres wird eine Kontoführungsgebühr von 5 EUR abgezogen.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aufgabe">Aufgabe<a class="anchor-link" href="#Aufgabe">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">anzahl_jahre</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">zinssatz</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># pro Monat</span>
-<span class="n">guthaben</span> <span class="o">=</span> <span class="mf">1200.0</span>
-
-<span class="c1"># Hier einfügen</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">jahr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">anzahl_jahre</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">jahr</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;:</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">monat</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
-        <span class="n">guthaben</span> <span class="o">=</span> <span class="n">guthaben</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">zinssatz</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">guthaben</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="n">guthaben</span> <span class="o">=</span> <span class="n">guthaben</span> <span class="o">-</span> <span class="mi">5</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">jahr</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">guthaben</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0:	1212.0	1224.12	1236.36	1248.72	1261.21	1273.82	1286.56	1299.43	1312.42	1325.55	1338.8	1352.19	0 1347.19
-1:	1360.66	1374.27	1388.01	1401.89	1415.91	1430.07	1444.37	1458.81	1473.4	1488.14	1503.02	1518.05	1 1513.05
-2:	1528.18	1543.46	1558.89	1574.48	1590.23	1606.13	1622.19	1638.41	1654.8	1671.35	1688.06	1704.94	2 1699.94
-3:	1716.94	1734.11	1751.45	1768.96	1786.65	1804.52	1822.57	1840.79	1859.2	1877.79	1896.57	1915.53	3 1910.53
-4:	1929.64	1948.94	1968.43	1988.11	2007.99	2028.07	2048.35	2068.84	2089.52	2110.42	2131.52	2152.84	4 2147.84
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Hinweise:</strong></p>
-<ul>
-<li>Die Rundung erfolgt hier nur bei der Ausgabe!</li>
-<li>Für die Rundung bei der Ausgabe gibt es spezielle Mechanismen, die hier aber nicht behandelt werden.</li>
-<li>Man muss festlegen, ob die Gebühr nach oder vor der Zinsgutschrift für den letzten Monat eines Jahres erfolgen soll.</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14510,74 +15265,25 @@ $ 0 &lt; x &lt; 10 $</p>
 
 </div>
 </div>
-</div></section></section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
-<script>
-
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
-    ],
-
-    function(head, Reveal){
-
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-
-            transition: "slide",
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        function setScrollingSlide() {
-            var scroll = false
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
-        }
-
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
-
-    }
-
-);
-</script>
-
+</div>
+    </div>
+  </div>
 </body>
+
+ 
 
 
 </html>
