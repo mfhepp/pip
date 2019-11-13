@@ -13140,7 +13140,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München
 <br /><br /></p>
-<h2 id="Einheit-1:-Erste-Schritte-in-Python-">Einheit 1: Erste Schritte in Python <span class="tocSkip" /><a class="anchor-link" href="#Einheit-1:-Erste-Schritte-in-Python-">&#182;</a></h2><p><strong>Version: 2019-11-08</strong>
+<h2 id="Einheit-1:-Erste-Schritte-in-Python-">Einheit 1: Erste Schritte in Python <span class="tocSkip" /><a class="anchor-link" href="#Einheit-1:-Erste-Schritte-in-Python-">&#182;</a></h2><p><strong>Version: 2019-11-13</strong>
 <br /><br />
 <a href="http://www.ebusiness-unibw.org/wiki/Teaching/PIP"><strong>http://www.ebusiness-unibw.org/wiki/Teaching/PIP</strong></a></p>
 
@@ -13466,27 +13466,12 @@ von Werten und Ausdrücken.</li>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Grundlegende-Datenstrukturen">Grundlegende Datenstrukturen<a class="anchor-link" href="#Grundlegende-Datenstrukturen">&#182;</a></h2><ul>
-<li>Alles in Python ist genaugenommen ein Objekt - jeder Wert, jedes Unterprogramm etc. </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Alle Objekte, also auch Werte liegen irgendwo im Arbeitsspeicher des Computers.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Die Position nennt man die <strong>Adresse</strong>. Sie entspricht der Nummer der Speicherzelle, an der die Daten abgelegt sind, die das Objekt repräsentieren.</li>
+<li><p>Alles in Python ist genaugenommen ein Objekt - jeder Wert, jedes Unterprogramm etc.</p>
+</li>
+<li><p>Alle Objekte, also auch Werte liegen irgendwo im Arbeitsspeicher des Computers.</p>
+</li>
+<li><p>Die Position nennt man die <strong>Adresse</strong>. Sie entspricht der Nummer der Speicherzelle, an der die Daten abgelegt sind, die das Objekt repräsentieren.</p>
+</li>
 </ul>
 
 </div>
@@ -13837,7 +13822,7 @@ FH
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ausgabe-mit-print">Ausgabe mit <em>print</em><a class="anchor-link" href="#Ausgabe-mit-print">&#182;</a></h3><p>Man kann den Wert jeder Variable und jeden mathematischen Ausdruck mit dem Befehl <code>print(&lt;ausdruck&gt;)</code> auf dem Bildschirm anzeigen lassen:</p>
+<h3 id="Ausgabe-mit-print">Ausgabe mit <code>print</code><a class="anchor-link" href="#Ausgabe-mit-print">&#182;</a></h3><p>Man kann den Wert jeder Variable und jeden mathematischen Ausdruck mit dem Befehl <code>print(&lt;ausdruck&gt;)</code> auf dem Bildschirm anzeigen lassen:</p>
 
 </div>
 </div>
@@ -13879,10 +13864,11 @@ Toll!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mehrere Werte durch Kommata getrennt</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Mehrere Werte werden</span>
+<span class="c1"># durch Kommata getrennt</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Hallo&#39;</span><span class="p">,</span> <span class="mf">10.3</span><span class="p">)</span>
 </pre></div>
 
@@ -14102,7 +14088,7 @@ sind die häufigsten Arten von Objekten in den meisten Programmen.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Unendlich-($\infty$)">Unendlich ($\infty$)<a class="anchor-link" href="#Unendlich-($\infty$)">&#182;</a></h4><p>Der Wert unendlich kann in Python auf zwei Wegen verwendet werden:</p>
+<h4 id="Unendlich-($\infty$)">Unendlich ($\infty$)<a class="anchor-link" href="#Unendlich-($\infty$)">&#182;</a></h4><p>Der Wert unendlich kann in Python auf zwei Wegen erhalten werden:</p>
 
 </div>
 </div>
@@ -14393,6 +14379,13 @@ Beispiele:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Wurzel">Wurzel<a class="anchor-link" href="#Wurzel">&#182;</a></h4><p>Direkt in Python gibt es keine Funktion für die Quadratwurzel, weil man dies einfach als Potenzfunktion mit einem Bruch als Exponenten ausdrücken kann:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>$\sqrt{x} = x^\frac{1}{2}$</p>
 <p>$\sqrt[3]{x} = x^\frac{1}{3}$</p>
 
@@ -14401,7 +14394,7 @@ Beispiele:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Quadratwurzel</span>
@@ -14719,6 +14712,14 @@ Beispiele:</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Runden-mit-round()">Runden mit <code>round()</code><a class="anchor-link" href="#Runden-mit-round()">&#182;</a></h4><p>Mit der Funktion <code>round(&lt;wert&gt;, &lt;anzahl_stellen&gt;)</code> kann man mathematisch korrekt runden.</p>
 <p>Wenn keine Stellenanzahl angegeben wird, wird auf die nächste ganze Zahl gerundet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Beispiel:</strong></p>
 
 </div>
 </div>
@@ -15284,13 +15285,20 @@ oder </li>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Bei numerischen Ausdrücken gibt es i.d.R. keinen Unterschied:</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Bei numerischen Ausdrücken gibt es i.d.R. keinen Unterschied:</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="ow">is</span> <span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
@@ -15653,6 +15661,13 @@ True
 </tr>
 </tbody>
 </table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Listen</li>
 <li>Dictionaries</li>
@@ -16101,6 +16116,15 @@ Er sagte &#34;Hallo&#34;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Beispiel für f-Strings:</strong>
+Die Ausdrücke innerhalb der geschweiften Klammern werden durch ihren Wert ersetzt.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[66]:</div>
@@ -16147,7 +16171,14 @@ Der Umfang eines Kreises mit dem Radius r=2 ist 6.283185307179586.
 <li>ob fehlende Stellen vor dem Dezimalpunkt mit Leerzeichen, Nullen oder einem anderen Zeichen aufgefüllt werden sollen, sowie</li>
 <li>den Datentyp (oft <code>f</code> für eine Gleitkommazahl).</li>
 </ul>
-<p><code>f'{&lt;wert&gt;:&lt;breite&gt;.&lt;nachkommastellen&gt;f}'</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Formattierung-von-Werten-innerhalb-von-f-Strings-(nicht-klausurrelevant)">Formattierung von Werten innerhalb von f-Strings (nicht klausurrelevant)<span class="tocSkip" /><a class="anchor-link" href="#Formattierung-von-Werten-innerhalb-von-f-Strings-(nicht-klausurrelevant)">&#182;</a></h5><p><code>f'{&lt;wert&gt;:&lt;breite&gt;.&lt;nachkommastellen&gt;f}'</code></p>
 <p>Mit führender Null:</p>
 <p><code>f'{&lt;wert&gt;:0&lt;breite&gt;.&lt;nachkommastellen&gt;f}'</code></p>
 <p><a href="https://docs.python.org/3/library/string.html#formatspec">Link zur vollständigen Dokumentation der Formatierungsanweisungen</a>.</p>
@@ -16286,6 +16317,14 @@ UNIBWM IST TOLL
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Aufsplitten mit <code>.split()</code></strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[123]:</div>
@@ -16318,13 +16357,20 @@ UNIBWM IST TOLL
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Whitespace (Leerzeichen etc.) entfernen mit <code>.strip()</code></strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[124]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text_3</span> <span class="o">=</span> <span class="s2">&quot; = Hallo = &quot;</span>
-<span class="c1"># Whitespace (Leerzeichen etc.) links und rechts entfernen</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">text_3</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> 
 </pre></div>
 
@@ -16498,7 +16544,7 @@ True
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sie können auch einzeln geändert werden:</p>
+<p><strong>Listenelemente können auch einzeln geändert werden:</strong></p>
 
 </div>
 </div>
@@ -16540,21 +16586,51 @@ True
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Bereiche">Bereiche<a class="anchor-link" href="#Bereiche">&#182;</a></h5><p>Man kann auch Bereiche adressieren. Dazu gibt man den Index des ersten Elements und das erste nicht mehr gewünschte Element an.</p>
-<p>Wenn man einen der beiden Werte wegläßt, wir der Anfang bzw. das Ende der Liste verwendet.</p>
+<p>Wenn man einen der beiden Werte wegläßt, wird der Anfang bzw. das Ende der Liste verwendet.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 <span class="c1"># Alle ab dem zweiten Element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-<span class="c1"># Alle bis zum zweiten Element</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alle bis zum zweiten Element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
 <span class="c1"># Alle vom zweiten bis zum dritten Element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
@@ -16574,8 +16650,7 @@ True
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;two&#39;, &#39;three&#39;, &#39;four&#39;, &#39;five&#39;]
-[&#39;one&#39;, &#39;two&#39;]
+<pre>[&#39;one&#39;, &#39;two&#39;]
 [&#39;two&#39;, &#39;three&#39;]
 </pre>
 </div>
@@ -16750,13 +16825,15 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">]</span>
 <span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ABC&#39;</span>  <span class="c1"># ABC ist hier eine Zeichenkette</span>
-<span class="c1"># Python versucht, den übergebenen Wert in Unterlemente zu zerlegen und diese einzufügen.</span>
-<span class="c1"># Daher werden hier die drei Buchstaben A, B und C als neue Listenelemente eingefügt.</span>
+<span class="c1"># Python versucht, den übergebenen Wert in Unterlemente zu zerlegen </span>
+<span class="c1"># und diese einzufügen.</span>
+<span class="c1"># Daher werden hier die drei Buchstaben A, B und C als neue Listenelemente </span>
+<span class="c1"># eingefügt.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </pre></div>
 
@@ -16828,8 +16905,7 @@ True
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Wenn man an einer Position <strong>MEHRERE</strong> neue Elemente einfügen will, 
-muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</p>
-<p>Das geschieht im folgenden durch 
+muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren. Das geschieht im folgenden durch 
 <code>my_list[2:3]</code>.</p>
 
 </div>
@@ -16975,12 +17051,22 @@ muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Negative Schrittweite für rückwärts:</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alle Elemente in umgekehrter Reihenfolge</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">,</span> <span class="s1">&#39;five&#39;</span><span class="p">,</span> <span class="s1">&#39;six&#39;</span><span class="p">]</span>
+
+<span class="c1"># Alle Elemente in umgekehrter Reihenfolge</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
@@ -17010,7 +17096,7 @@ muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Verl&#228;ngern-der-Liste-mit-append()">Verl&#228;ngern der Liste mit <code>append()</code><a class="anchor-link" href="#Verl&#228;ngern-der-Liste-mit-append()">&#182;</a></h5><p>Mit der Funktion <code>append(&lt;wert&gt;)</code> kann man einen Wert am Ende der Liste hinzufügen.</p>
+<h5 id="Verl&#228;ngern-der-Liste-mit-append()">Verl&#228;ngern der Liste mit <code>append()</code><a class="anchor-link" href="#Verl&#228;ngern-der-Liste-mit-append()">&#182;</a></h5><p>Mit der Funktion <code>append(&lt;wert&gt;)</code> kann man einen Wert am Ende einer Liste hinzufügen.</p>
 
 </div>
 </div>
@@ -17336,7 +17422,7 @@ muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pop()</code> (also ohne Indexposition als Parameter) entfernt das Element am Ende der Liste:</p>
+<p><code>pop()</code> (ohne Parameter) entfernt das Element am Ende der Liste:</p>
 
 </div>
 </div>
@@ -17417,21 +17503,81 @@ muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h6 id="Stapel-(Stack)-und-Last-in,-first-out">Stapel (Stack) und Last in, first out<a class="anchor-link" href="#Stapel-(Stack)-und-Last-in,-first-out">&#182;</a></h6><p>Das kann man sehr einfach verwenden, um einen Stapel (Stack) zu implementieren oder in anderen Zusammenhängen das <a href="https://de.wikipedia.org/wiki/Last_In_%E2%80%93_First_Out">LIFO-Prinzip ("last in, first out")</a> anzuwenden.</p>
+<p><strong>Stapel (Stack) und Last in, first out</strong></p>
+<p><code>pop()</code> kann man sehr  verwenden, um einen Stapel (Stack) zu implementieren oder in anderen Zusammenhängen das <a href="https://de.wikipedia.org/wiki/Last_In_%E2%80%93_First_Out">LIFO-Prinzip ("last in, first out")</a> anzuwenden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th>Position</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Paul</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Mary</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Peter</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>Ein neues Element Linda wird oben auf den Stapel gelegt:</code></p>
+<table>
+<thead><tr>
+<th>Position</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Linda</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Paul</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Mary</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Peter</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mitarbeiter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;Linda&#39;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
 <span class="n">mitarbeiter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Frank&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
-<span class="n">mitarbeiter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Alex&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unser Team: &#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mitarbeiter</span><span class="p">))</span>
 <span class="c1"># Wer zuletzt eingestellt wurde, wird zuerst wieder entlassen.</span>
 <span class="n">name</span> <span class="o">=</span> <span class="n">mitarbeiter</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -17455,9 +17601,8 @@ muss man diese Position <strong>als Bereich der Länge 1</strong> adressieren.</
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;]
 Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &#39;Frank&#39;]
-Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &#39;Frank&#39;, &#39;Alex&#39;]
-Leider müssen wir Alex wieder entlassen.
-Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &#39;Frank&#39;]
+Leider müssen wir Frank wieder entlassen.
+Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;]
 </pre>
 </div>
 </div>
@@ -17515,7 +17660,7 @@ Unser Team: [&#39;Peter&#39;, &#39;Mary&#39;, &#39;Paul&#39;, &#39;Linda&#39;, &
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Achtung:</strong> sort() ist eine Funktion, <strong>die das Objekt verändert.</strong>
+<p><strong>Achtung:</strong> <code>sort()</code> ist eine Funktion, <strong>die das Objekt verändert.</strong>
 Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am bisherigen Ort sortiert.</strong></p>
 
 </div>
@@ -17821,7 +17966,6 @@ Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am 
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tuple</span>
 <span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="n">my_tuple_mixed</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;UniBwM&#39;</span><span class="p">)</span>
-
 <span class="n">latitude</span> <span class="o">=</span> <span class="mf">48.0803</span>
 <span class="n">longitude</span> <span class="o">=</span> <span class="mf">11.6382</span>
 <span class="n">geo_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">)</span>
@@ -17842,7 +17986,7 @@ Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">geo_position</span> <span class="o">=</span> <span class="p">(</span><span class="mf">48.0803</span><span class="p">,</span> <span class="mf">11.6382</span><span class="p">)</span>
@@ -17875,10 +18019,11 @@ Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Das funktioniert übriges auch mit anderen komplexen Datentypen</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Das funktioniert auch </span>
+<span class="c1"># mit anderen komplexen Datentypen</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;ABC&quot;</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">text</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -17907,13 +18052,20 @@ Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am 
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Auch die Elemente eines Tuples können einzeln adressiert werden:</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Auch die Elemente eines Tuples können einzeln adressiert werden:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">geo_position</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">geo_position</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -17931,6 +18083,37 @@ Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am 
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>48.0803
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">geo_position</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>11.6382
 </pre>
 </div>
 </div>
@@ -17987,13 +18170,14 @@ Es wird keine sortierte Version zurückgeliefert, <strong>sondern das Objekt am 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h4>
+<h4 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h4><p>Dictionaries sind Datenstrukturen, in denen Paare aus Eigenschaften (Properties) und Werte (Values) gespeichert werden können. Dier Werte können über ihren Namen angesprochen werden:</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict_empty</span> <span class="o">=</span> <span class="p">{}</span>
@@ -18031,7 +18215,7 @@ WOW
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Elemente können geändert und hinzugefügt werden</span>
@@ -18067,13 +18251,20 @@ WOW
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Wenn es den Schlüssel ('key') nicht gibt, wird eine Fehlermeldung produziert:</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wenn es den Schlüssel (&#39;key&#39;) nicht gibt, wird eine Fehlermeldung produziert:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;einkommen&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;einkommen&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -18093,9 +18284,8 @@ WOW
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-41-909ad30b7b4b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Wenn es den Schlüssel (&#39;key&#39;) nicht gibt, wird eine Fehlermeldung produziert:</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>my_dict<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;einkommen&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">&lt;ipython-input-24-9a15f52b31bf&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>my_dict<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;einkommen&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">KeyError</span>: &#39;einkommen&#39;</pre>
 </div>
@@ -18105,13 +18295,20 @@ WOW
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Das kann man mit der Methode <code>get(&lt;eigenschaft&gt;)</code> vermeiden:</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Das kann man mit der Methode get vermeiden:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;einkommen&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;einkommen&#39;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -18137,13 +18334,21 @@ WOW
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Man kann auch einen Default-Wert vorgeben (normalerweise <code>None</code>).</strong></p>
+<p>Dieser Wert wird zurückgeliefert, wenn es die Eigenschaft bisher nicht gibt.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Man kann auch einen Default-Wert vorgeben (normalerweise None):</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;einkommen&#39;</span><span class="p">,</span> <span class="s1">&#39;Unbekannt&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;einkommen&#39;</span><span class="p">,</span> <span class="s1">&#39;Unbekannt&#39;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;einkommen&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 
@@ -18170,6 +18375,14 @@ WOW
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Beispiel:</strong></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18238,6 +18451,14 @@ WOW
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Liste von Dictionaries:</strong></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18423,7 +18644,7 @@ John Lennon
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Named-Tuples-(nicht-klausurrelevant)">Named Tuples (nicht klausurrelevant)<a class="anchor-link" href="#Named-Tuples-(nicht-klausurrelevant)">&#182;</a></h4><ul>
 <li>Nicht Gegenstand dieser Vorlesung</li>
-<li><a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">https://docs.python.org/3/library/collections.html#collections.namedtuple</a></li>
+<li><a href="https://docs.python.org/3/library/collections.html#collections.namedtuple">Python Reference: Named Tuples</a></li>
 </ul>
 
 </div>
@@ -18616,19 +18837,6 @@ John Lennon
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
