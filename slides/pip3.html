@@ -13244,7 +13244,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München
 <br /><br /></p>
-<h2 id="Einheit-3:-Objektorientierte-Programmierung-in-Python">Einheit 3: Objektorientierte Programmierung in Python<span class="tocSkip" /><a class="anchor-link" href="#Einheit-3:-Objektorientierte-Programmierung-in-Python">&#182;</a></h2><p><strong>Version: 2019-11-08</strong> -- Work in progress ;-)
+<h2 id="Einheit-3:-Objektorientierte-Programmierung-in-Python">Einheit 3: Objektorientierte Programmierung in Python<span class="tocSkip" /><a class="anchor-link" href="#Einheit-3:-Objektorientierte-Programmierung-in-Python">&#182;</a></h2><p><strong>Version: 2019-12-05</strong> 
 <br /><br />
 <a href="http://www.ebusiness-unibw.org/wiki/Teaching/PIP"><strong>http://www.ebusiness-unibw.org/wiki/Teaching/PIP</strong></a></p>
 
@@ -13257,6 +13257,740 @@ a.anchor-link {
 <h1 id="Funktionen-und-Modularisierung">Funktionen und Modularisierung<a class="anchor-link" href="#Funktionen-und-Modularisierung">&#182;</a></h1>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h2><ul>
+<li>Programmteile, die oft wiederholt werden, sollten nicht mehrfach vorhanden sein.</li>
+<li>Stattdessen sollte man sie über einen Namen aufrufen können.</li>
+<li>Einen Programmteil, den man über seinen Namen aufrufen kann, nennt man in der Programmierung <strong>Funktion</strong> oder <strong>Methode</strong>.</li>
+<li>Programme werden dadurch kürzer und übersichtlicher.</li>
+<li>Vor allem aber muss man eine Routine nur noch an einem Ort ändern oder verbessern.</li>
+<li>Dies entspricht dem "DRY"-Prinzip: Don't Repeat Yourself.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Beispiel:</strong> Im Folgenden wird zwei Mal 'Hallo UniBwM' ausgegeben:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo UniBwM&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo UniBwM&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hallo UniBwM
+Hallo UniBwM
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Besser wäre es, wenn man diese Funktion ein Mal definieren und dann bei Bedarf aufrufen könnte.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Definition-von-Funktionen">Definition von Funktionen<a class="anchor-link" href="#Definition-von-Funktionen">&#182;</a></h2><p>Funktionen werden in Python mit dem Schlüsselwort <code>def</code> definiert.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hallo UniBwM&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Anschließend kann man Sie jederzeit über ihren Namen aufrufen:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">say_hello</span><span class="p">()</span>
+<span class="n">say_hello</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hallo UniBwM
+Hallo UniBwM
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hier spart man zwar nicht wirklich viel an Programmlänge. Aber wenn man den Begrüßungstext ändern möchte, muss man das nur an einer Stelle tun.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#220;bergabeparameter">&#220;bergabeparameter<a class="anchor-link" href="#&#220;bergabeparameter">&#182;</a></h2><p>Eine Funktion kann so definiert werden, dass man ihr Werte als Parameter übergibt, die dann das Verhalten der 
+Funktion verändern.</p>
+<p>Dazu definiert man in runden Klammern eine Liste von Namen, über die der jeweils übergebene Wert <strong>innerhalb der Funktion</strong> verfügbar ist.</p>
+<p><strong>Beispiel:</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">say_text</span><span class="p">(</span><span class="s1">&#39;Hallo UniBwM&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hallo UniBwM
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Natürlich können auch mehrere Parameter übergeben werden:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multipliziere</span><span class="p">(</span><span class="n">wert_1</span><span class="p">,</span> <span class="n">wert_2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Multipliziert &lt;wert_1&gt; mit &lt;wert_2.&quot;&quot;&quot;</span>
+    <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">wert_1</span> <span class="o">*</span> <span class="n">wert_2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Aufruf mit Werten</span>
+<span class="n">multipliziere</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>15
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Aufruf mit Variablen</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">multipliziere</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>15
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Arten-von-Parametern">Arten von Parametern<a class="anchor-link" href="#Arten-von-Parametern">&#182;</a></h3><p>Beim Aufruf müssen die übergebenen Parameter zu den Parametern in der Definition passen. Die Parameter einer Funktion oder Methode nennt man auch Signatur.</p>
+<p>Hier gibt es mehrere Möglichkeiten.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Positional-Arguments">Positional Arguments<a class="anchor-link" href="#Positional-Arguments">&#182;</a></h4><p>Parameter können einfach über ihre Reihenfolge bestimmt sein:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">funktion</span><span class="p">(</span><span class="n">parameter_1</span><span class="p">,</span> <span class="n">parameter_2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">parameter_1</span><span class="p">,</span> <span class="n">parameter_2</span><span class="p">)</span>
+
+<span class="n">funktion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">teile</span><span class="p">(</span><span class="n">dividend</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dividend</span> <span class="o">/</span> <span class="n">divisor</span><span class="p">)</span>
+
+<span class="n">teile</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Die Reihenfolge bestimmt die Zuordnung:</span>
+<span class="n">teile</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Named-Arguments">Named Arguments<a class="anchor-link" href="#Named-Arguments">&#182;</a></h4><p>Alternativ kann man auch einen Namen vorgeben, der verwendet werden muss. Dies erlaubt auch Default-Werte.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">funktion</span><span class="p">(</span><span class="n">parameter_name</span><span class="o">=</span><span class="s1">&#39;UniBwM&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">parameter_name</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Aufruf mit Parameter</span>
+<span class="n">funktion</span><span class="p">(</span><span class="n">parameter_name</span><span class="o">=</span><span class="s1">&#39;hallo&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hallo
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variable text wird als Wert übergeben</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;TUM&#39;</span>
+<span class="n">funktion</span><span class="p">(</span><span class="n">parameter_name</span><span class="o">=</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>TUM
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wenn der Parameter fehlt, wird der Default-Wert verwendet:</span>
+<span class="n">funktion</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>UniBwM
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="R&#252;ckgabewerte">R&#252;ckgabewerte<a class="anchor-link" href="#R&#252;ckgabewerte">&#182;</a></h2><p>Eine Funktion kann einen Wert als Ergebnis zurückliefern. Dazu dient das Schlüsselwort <code>return</code>.</p>
+<p>Dann muss man den Aufruf der Funktion einer Variable zuweisen, ausgeben oder auf andere Weise in einem Ausdruck verwenden:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">verdopple</span><span class="p">(</span><span class="n">parameter_1</span><span class="p">):</span>
+    <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">parameter_1</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">ergebnis</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">verdopple</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">mein_wert</span> <span class="o">=</span> <span class="n">verdopple</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mein_wert</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>20
+20
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Der Aufruf einer Funktion mit Rückgabewert kann wie jeder andere Wert oder Ausdruck verwendet werden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">verdopple</span><span class="p">(</span><span class="n">verdopple</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>16
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">verdopple</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.19</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>23.799999999999997
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wenn man mehrere Werte zurückliefern möchte, muss man einen Datentyp verwenden, der Unterelemente enthält.
+Beispiele:</p>
+<ul>
+<li>Tupel</li>
+<li>Dictionary</li>
+<li>Benutzerdefinierte Objekte</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">zwei_werte</span><span class="p">(</span><span class="n">parameter_1</span><span class="p">):</span>
+    <span class="n">wert_1</span> <span class="o">=</span> <span class="n">parameter_1</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="n">wert_2</span> <span class="o">=</span> <span class="n">parameter_1</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">wert_1</span><span class="p">,</span> <span class="n">wert_2</span><span class="p">)</span>
+
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="n">zwei_werte</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">ergebnis</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(8, 12)
+8 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Übungsaufgabe:</strong> Schreiben Sie eine Funktion, die die Quersumme einer als Parameter übergebenen Ganzzahl zurückliefert.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">quersumme</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+    <span class="n">zahl</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
+    <span class="n">ergebnis</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">ziffer</span> <span class="ow">in</span> <span class="n">zahl</span><span class="p">:</span>
+        <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">ergebnis</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">ziffer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ergebnis</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">quersumme</span><span class="p">(</span><span class="mi">426</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13290,8 +14024,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Objektorientierung-als-Programmierparadigma">Objektorientierung als Programmierparadigma<a class="anchor-link" href="#Objektorientierung-als-Programmierparadigma">&#182;</a></h1><h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h2><h2 id="Klassen">Klassen<a class="anchor-link" href="#Klassen">&#182;</a></h2><h2 id="Instanzen">Instanzen<a class="anchor-link" href="#Instanzen">&#182;</a></h2><h2 id="Methoden">Methoden<a class="anchor-link" href="#Methoden">&#182;</a></h2><p>Terminologie: Signatur</p>
-<h2 id="Beispiel">Beispiel<a class="anchor-link" href="#Beispiel">&#182;</a></h2>
+<h1 id="Objektorientierung-als-Programmierparadigma">Objektorientierung als Programmierparadigma<a class="anchor-link" href="#Objektorientierung-als-Programmierparadigma">&#182;</a></h1><h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">&#182;</a></h2><h2 id="Klassen">Klassen<a class="anchor-link" href="#Klassen">&#182;</a></h2><h2 id="Instanzen">Instanzen<a class="anchor-link" href="#Instanzen">&#182;</a></h2><h2 id="Methoden">Methoden<a class="anchor-link" href="#Methoden">&#182;</a></h2><h2 id="Beispiel">Beispiel<a class="anchor-link" href="#Beispiel">&#182;</a></h2>
 </div>
 </div>
 </div></section></section><section><section>

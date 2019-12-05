@@ -13168,12 +13168,13 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">faktor_1</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">faktor_2</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">ergebnis</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="c1"># Bedingung :</span>
     <span class="c1"># Anweisungen</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
@@ -13183,18 +13184,80 @@ $( document ).ready(function(){
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>35
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3><p><strong>Hinweis:</strong> Das Sortieren eines Dictionaries nach Werten ist nicht-trivial und wird hier nicht behandelt.</p>
-
+<h3 id="Musterl&#246;sung">Musterl&#246;sung<a class="anchor-link" href="#Musterl&#246;sung">&#182;</a></h3><h4 id="Mit-Hilfsvariable-zaehler">Mit Hilfsvariable <code>zaehler</code><a class="anchor-link" href="#Mit-Hilfsvariable-zaehler">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">faktor_1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">faktor_2</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">zaehler</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">zaehler</span> <span class="o">&lt;</span> <span class="n">faktor_2</span> <span class="p">:</span>
+    <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">ergebnis</span> <span class="o">+</span> <span class="n">faktor_1</span>
+    <span class="n">zaehler</span> <span class="o">=</span> <span class="n">zaehler</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>35
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Ohne-Hilfsvariable-(faktor_2-wird-direkt-vermindert)">Ohne Hilfsvariable (<code>faktor_2</code> wird direkt vermindert)<a class="anchor-link" href="#Ohne-Hilfsvariable-(faktor_2-wird-direkt-vermindert)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">faktor_1</span> <span class="o">=</span> <span class="mi">5</span>
@@ -13202,7 +13265,7 @@ $( document ).ready(function(){
 <span class="n">ergebnis</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">faktor_2</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">ergebnis</span> <span class="o">+</span> <span class="n">faktor_1</span>
-    <span class="n">faktor_2</span> <span class="o">=</span> <span class="n">faktor_2</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">faktor_2</span> <span class="o">=</span> <span class="n">faktor_2</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
 </pre></div>
 
@@ -13271,6 +13334,13 @@ $( document ).ready(function(){
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Mit-Hilfsvariable-rest">Mit Hilfsvariable <code>rest</code><a class="anchor-link" href="#Mit-Hilfsvariable-rest">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[71]:</div>
@@ -13284,7 +13354,53 @@ $( document ).ready(function(){
 <span class="k">while</span> <span class="n">rest</span> <span class="o">&gt;=</span> <span class="n">divisor</span><span class="p">:</span>
     <span class="n">quotient</span> <span class="o">=</span> <span class="n">quotient</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">rest</span> <span class="o">=</span> <span class="n">rest</span> <span class="o">-</span> <span class="n">divisor</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">quotient</span><span class="p">,</span> <span class="n">rest</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quotient</span><span class="p">,</span> <span class="n">rest</span><span class="p">),</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>9 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Ohne-Hilfsvariable-(dividend-wird-direkt-vermindert)">Ohne Hilfsvariable (<code>dividend</code> wird direkt vermindert)<a class="anchor-link" href="#Ohne-Hilfsvariable-(dividend-wird-direkt-vermindert)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variante ohne Hilfsvariable</span>
+<span class="c1"># Dividend : Divisor = Quotient</span>
+<span class="n">dividend</span> <span class="o">=</span> <span class="mi">57</span>
+<span class="n">divisor</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">quotient</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">dividend</span> <span class="o">&gt;=</span> <span class="n">divisor</span><span class="p">:</span>
+    <span class="n">quotient</span> <span class="o">=</span> <span class="n">quotient</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">dividend</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">-</span> <span class="n">divisor</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quotient</span><span class="p">,</span> <span class="n">dividend</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13333,6 +13449,10 @@ $( document ).ready(function(){
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="c1"># Bedingung hier einfügen :</span>
+    <span class="c1"># Anweisungen hier einfügen</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ergebnis</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13349,13 +13469,16 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fakultaet</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">fakultaet</span> <span class="o">=</span> <span class="n">fakultaet</span> <span class="o">*</span> <span class="n">zahl</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Fakultät von &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39; ist &#39;</span><span class="p">,</span> <span class="n">fakultaet</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">ergebnis</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">hilfsvariable</span> <span class="o">=</span> <span class="n">x</span>
+<span class="k">while</span> <span class="n">hilfsvariable</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">ergebnis</span> <span class="o">=</span> <span class="n">ergebnis</span> <span class="o">*</span> <span class="n">hilfsvariable</span>
+    <span class="n">hilfsvariable</span> <span class="o">=</span> <span class="n">hilfsvariable</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die Fakultät von &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39; ist &#39;</span><span class="p">,</span> <span class="n">ergebnis</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13419,15 +13542,17 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dezimalzahl</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binaerzahl</span> <span class="o">=</span> <span class="s1">&#39;01110101&#39;</span>
+<span class="n">dezimalzahl</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">stellenwert</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="c1"># Wir müssen an der letzten Stelle anfangen</span>
 <span class="n">letzte_stelle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">letzte_stelle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">dezimalzahl</span> <span class="o">=</span> <span class="n">dezimalzahl</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">[</span><span class="n">position</span><span class="p">])</span> <span class="o">*</span> <span class="n">stellenwert</span>
+    <span class="k">if</span> <span class="n">binaerzahl</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+        <span class="n">dezimalzahl</span> <span class="o">=</span> <span class="n">dezimalzahl</span> <span class="o">+</span> <span class="n">stellenwert</span>
     <span class="n">stellenwert</span> <span class="o">=</span> <span class="n">stellenwert</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">,</span> <span class="s1">&#39; entspricht &#39;</span><span class="p">,</span> <span class="n">dezimalzahl</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kontrolle: &#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -13460,7 +13585,63 @@ Kontrolle:  117
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Eleganter:</strong></p>
+<p>Es wäre auch möglich
+<code>dezimalzahl = dezimalzahl + int(binaerzahl[position]) * stellenwert</code> zu verwenden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Tipp:</strong> Mit <code>binaerzahl[::-1]</code> oder <code>reversed(binaerzahl)</code> können Sie die Zeichenkette umdrehen. Dann läßt sich die Umwandlung eleganter formulieren:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binaerzahl</span> <span class="o">=</span> <span class="s1">&#39;01110101&#39;</span>
+<span class="n">dezimalzahl</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">stellenwert</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># Es ginge auch</span>
+<span class="c1"># for digit in binaerzahl[::-1]:</span>
+<span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">binaerzahl</span><span class="p">):</span>
+    <span class="n">dezimalzahl</span> <span class="o">=</span> <span class="n">dezimalzahl</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span> <span class="o">*</span> <span class="n">stellenwert</span>
+    <span class="n">stellenwert</span> <span class="o">=</span> <span class="n">stellenwert</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dezimalzahl</span><span class="p">)</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>117
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Noch eleganter:</strong> Die Funktion <code>enumerate()</code> liefert bei jedem Durchgang den Index und den Wert zurück. Dies ist nicht klausurrelevant.</p>
 
 </div>
 </div>
@@ -13550,10 +13731,11 @@ Kontrolle:  117
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">124723847273489</span>
+<span class="c1"># Hier einfügen</span>
 </pre></div>
 
     </div>
@@ -13570,11 +13752,13 @@ Kontrolle:  117
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quersumme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">stelle</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zahl</span> <span class="o">=</span> <span class="mi">124723847273489</span>
+<span class="n">zahl_als_zeichenkette</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
+<span class="n">quersumme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">stelle</span> <span class="ow">in</span> <span class="n">zahl_als_zeichenkette</span><span class="p">:</span>
     <span class="n">quersumme</span> <span class="o">=</span> <span class="n">quersumme</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">stelle</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">quersumme</span><span class="p">)</span>
 </pre></div>
@@ -13613,10 +13797,10 @@ Kontrolle:  117
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hepp&#39;</span><span class="p">,</span> <span class="s1">&#39;Mueller&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hepp&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">,</span> <span class="s1">&#39;Mueller&#39;</span><span class="p">,</span> <span class="s1">&#39;Meier&#39;</span><span class="p">]</span>
 <span class="n">gesuchter_wert</span> <span class="o">=</span> <span class="s1">&#39;Meier&#39;</span>
 <span class="c1"># Hier einfügen</span>
 </pre></div>
@@ -13635,7 +13819,7 @@ Kontrolle:  117
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">positionszaehler</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13659,7 +13843,8 @@ Kontrolle:  117
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Meier gefunden an Position 2
+<pre>Meier gefunden an Position 1
+Meier gefunden an Position 3
 </pre>
 </div>
 </div>
@@ -14660,9 +14845,9 @@ Euro pro Sekunde. Alle übrigen Gespräche sind internationale Verbindungen und 
 <h2 id="Aufgabe:-Pr&#252;fen-Sie,-ob-eine-Zeichenkette-ein-Palindrom-ist.">Aufgabe: Pr&#252;fen Sie, ob eine Zeichenkette ein Palindrom ist.<a class="anchor-link" href="#Aufgabe:-Pr&#252;fen-Sie,-ob-eine-Zeichenkette-ein-Palindrom-ist.">&#182;</a></h2><p>Ein <a href="https://de.wikipedia.org/wiki/Palindrom">Palindrom ist ein Wort, das vorwärts und rückwärts gelesen dieselbe Zeichenfolge hat</a>.</p>
 <p><strong>Beispiele:</strong></p>
 <ul>
-<li>ABBA</li>
-<li>OTTO</li>
-<li>LAGER</li>
+<li>ABBA ist ein Palindrom.</li>
+<li>OTTO ist ein Palindrom.</li>
+<li>LAGER ist kein Palindrom.</li>
 </ul>
 
 </div>
@@ -14745,10 +14930,11 @@ Euro pro Sekunde. Alle übrigen Gespräche sind internationale Verbindungen und 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># text[::-1] liefert eine Zeichenkette in umgekehrter Reihenfolge zurück</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ABBA&#39;</span>
+<span class="c1"># text[::-1] liefert eine Zeichenkette in umgekehrter Reihenfolge zurück</span>
 <span class="k">if</span> <span class="n">text</span> <span class="o">==</span> <span class="n">text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Palindrom&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
@@ -15097,7 +15283,7 @@ Die Deutschen in den Ländern Baden-Württemberg, Bayern, Berlin, Brandenburg, B
 
 
 <div class="output_png output_subarea ">
-<img src="uebungen_2_files/uebungen_2_114_0.png"
+<img src="uebungen_2_files/uebungen_2_122_0.png"
 >
 </div>
 
@@ -15199,8 +15385,8 @@ Die Deutschen in den Ländern Baden-Württemberg, Bayern, Berlin, Brandenburg, B
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Aufgabe:-Traveling-Salesman-Problem-(anspruchsvoll)">Aufgabe: Traveling Salesman Problem (anspruchsvoll)<a class="anchor-link" href="#Aufgabe:-Traveling-Salesman-Problem-(anspruchsvoll)">&#182;</a></h2><p>Das <a href="https://de.wikipedia.org/wiki/Problem_des_Handlungsreisenden">Problem des Handlungsreisenden</a> ist eines der wichtigsten klassischen Probleme der Logistik. Das Ziel ist es, aus einer Liste von Orten und einer Matrix der Entfernungen zwischen den Orten die kürzeste Route zu finden, die alle Orte genau einmal besucht.</p>
-<p>Die optimale Lösung ist nur durch hohen Rechenaufwand zu finden, sobald die Anzahl der Orte auch nur moderat groß ist.</p>
+<h2 id="Aufgabe:-Traveling-Salesperson-Problem-(anspruchsvoll)">Aufgabe: Traveling Salesperson Problem (anspruchsvoll)<a class="anchor-link" href="#Aufgabe:-Traveling-Salesperson-Problem-(anspruchsvoll)">&#182;</a></h2><p>Das <a href="https://de.wikipedia.org/wiki/Problem_des_Handlungsreisenden">Problem des Handlungsreisenden</a> ist eines bekanntesten Probleme der Logistik. Ziel ist es, aus einer Liste von Orten und einer Matrix der Entfernungen die kürzeste Route zu finden, die alle Orte genau einmal besucht und zum Ausgangsort zurückkehrt.</p>
+<p>Die optimale Lösung ist nur mit hohem Rechenaufwand zu finden, wenn die Anzahl der Orte wächst. Siehe auch <a href="https://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb">Peter Norvig: The Traveling Salesperson Problem</a>.</p>
 
 </div>
 </div>
@@ -15514,7 +15700,7 @@ Die Deutschen in den Ländern Baden-Württemberg, Bayern, Berlin, Brandenburg, B
 
 
 <div class="output_png output_subarea ">
-<img src="uebungen_2_files/uebungen_2_132_1.png"
+<img src="uebungen_2_files/uebungen_2_140_1.png"
 >
 </div>
 

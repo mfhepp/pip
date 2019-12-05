@@ -13140,7 +13140,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Programmierung-in-Python-">Programmierung in Python <span class="tocSkip" /><a class="anchor-link" href="#Programmierung-in-Python-">&#182;</a></h1><p><strong>Univ.-Prof. Dr. Martin Hepp,</strong> Universität der Bundeswehr München
 <br /><br /></p>
-<h2 id="Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">Einheit 2: Kontrollflussstrukturen und Algorithmik <span class="tocSkip" /><a class="anchor-link" href="#Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">&#182;</a></h2><p><strong>Version: 2019-11-13</strong>
+<h2 id="Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">Einheit 2: Kontrollflussstrukturen und Algorithmik <span class="tocSkip" /><a class="anchor-link" href="#Einheit-2:-Kontrollflussstrukturen-und-Algorithmik-">&#182;</a></h2><p><strong>Version: 2019-12-05</strong>
 <br /><br />
 <a href="http://www.ebusiness-unibw.org/wiki/Teaching/PIP"><strong>http://www.ebusiness-unibw.org/wiki/Teaching/PIP</strong></a></p>
 
@@ -13150,7 +13150,16 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sequenz">Sequenz<a class="anchor-link" href="#Sequenz">&#182;</a></h1>
+<h1 id="Kontrollflussstrukturen">Kontrollflussstrukturen<a class="anchor-link" href="#Kontrollflussstrukturen">&#182;</a></h1><p>Der Kontrollfluss eines Programms definiert, in welcher Reihenfolge, wie oft und unter welchen Bedingungen einzelne Befehle ausgeführt werden.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sequenz">Sequenz<a class="anchor-link" href="#Sequenz">&#182;</a></h1><p>Eine Sequenz ist die einfachste Kontrollflussstruktur. Bei einer Sequenz werden einzelne Anweisungen einfach nacheinander ausgeführt.</p>
+
 </div>
 </div>
 </div>
@@ -13194,30 +13203,32 @@ Vierte Anweisung
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Schleifen">Schleifen<a class="anchor-link" href="#Schleifen">&#182;</a></h1>
+<h1 id="Schleifen">Schleifen<a class="anchor-link" href="#Schleifen">&#182;</a></h1><p>Eine Schleife ist eine Kontrollflusstruktur, bei der eine Anweisung oder mehrere Anweisungen wiederholt werden.
+Hier gibt es mehrere Varianten.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Grundlagen:-Schleifen-mit-for">Grundlagen: Schleifen mit <code>for</code><a class="anchor-link" href="#Grundlagen:-Schleifen-mit-for">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Schleife für Liste mit Zahlen</span>
-<span class="n">zahlenreihe</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-</pre></div>
+<h2 id="Grundlagen:-Schleifen-mit-for">Grundlagen: Schleifen mit <code>for</code><a class="anchor-link" href="#Grundlagen:-Schleifen-mit-for">&#182;</a></h2><p>Eine Schleife, die über eine gegebene Folge von Objekten ablaufen soll, wird in Python mit <code>for</code> realisiert.</p>
 
-    </div>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Die Syntax ist dabei</p>
 
+<pre><code>for &lt;arbeitsvariable&gt; in &lt;eingangsdaten&gt;:
+    befehl ...</code></pre>
+<p>Die Schleife wird so oft ausgeführt, wie <strong><em>eingangsdaten</em></strong> Unterlemente hat.
+Bei jedem Durchgang ist der aktuelle Wert des aktuell bearbeiteten Unterelementes über den Namen von <strong><em>arbeitsvariable</em></strong> zugänglich.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13461,7 +13472,7 @@ Hallo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="range-als-Iterable"><code>range</code> als Iterable<a class="anchor-link" href="#range-als-Iterable">&#182;</a></h2><p>Manchmal möchte man eine Schleife auf eine bestimmte Folge an Zahlen anwenden. <code>range()</code> ist eine Hilfsfunktion, mit er ein Hilfsobjekt erzeugt werden kann, das eine bestimte Folge an Ganzzahlen liefert, über die eine Schleife ablaufen soll.</p>
+<h2 id="range-als-Iterable"><code>range</code> als Iterable<a class="anchor-link" href="#range-als-Iterable">&#182;</a></h2><p>Manchmal möchte man eine Schleife auf eine bestimmte Folge an Zahlen anwenden. <code>range()</code> ist eine Hilfsfunktion, mit er ein Hilfsobjekt erzeugt wird, das eine bestimte Folge an Ganzzahlen liefert, über die eine Schleife ablaufen soll.</p>
 
 </div>
 </div>
@@ -13471,7 +13482,8 @@ Hallo
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Alle Zahlen von 0 bis 4</span>
+<span class="k">for</span> <span class="n">zahl</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
 </pre></div>
 
@@ -13593,6 +13605,7 @@ Hallo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Negative Schrittweite:</strong></p>
 <p>Das funktioniert auch mit negativen Schrittweiten. Dann allerdings muss man darauf achten, dass <strong>der Startwert (hier 5) größer ist als die obere Schranke (hier 0).</strong></p>
 
 </div>
@@ -13867,7 +13880,8 @@ Das Beispiel von oben sähe dann so aus:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Schleifen-mit-while">Schleifen mit <code>while</code><a class="anchor-link" href="#Schleifen-mit-while">&#182;</a></h2>
+<h2 id="Schleifen-mit-while">Schleifen mit <code>while</code><a class="anchor-link" href="#Schleifen-mit-while">&#182;</a></h2><p>Wenn eine Schleife so oft wiederholt werden soll, bis eine Bedingung erfüllt ist, oder solange eine Bedingung nicht erfüllt ist, verwendet man besser eine Schleife mit <code>while</code>:</p>
+
 </div>
 </div>
 </div>
@@ -14024,7 +14038,8 @@ Abbruch - keine Antwort.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Verzweigungen">Verzweigungen<a class="anchor-link" href="#Verzweigungen">&#182;</a></h1>
+<h1 id="Verzweigungen">Verzweigungen<a class="anchor-link" href="#Verzweigungen">&#182;</a></h1><p>Verzweigungen werden verwendet, um einzelne Befehle nur dann auszuführen, wenn eine bestimmte Bedingung erfüllt ist. Sie entsprechen Fallunterscheidungen in der Mathematik.</p>
+
 </div>
 </div>
 </div>
@@ -14256,7 +14271,8 @@ $ 0 &lt; x &lt; 10 $</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Kombinationen">Kombinationen<a class="anchor-link" href="#Kombinationen">&#182;</a></h1>
+<h1 id="Kombinationen">Kombinationen<a class="anchor-link" href="#Kombinationen">&#182;</a></h1><p>Richtige Programme entstehen dadurch, dass man Sequenzen, Schleifen und Verzweigungen kombiniert, insbesondere ineinander verschachtelt.</p>
+
 </div>
 </div>
 </div>
