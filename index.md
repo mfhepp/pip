@@ -3,6 +3,8 @@
 Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python" von Prof. Dr. Martin Hepp an der Universität der Bundeswehr München. Die Materialien sind auch für die Allgemeinheit gedacht.
 
 ## Inhaltsverzeichnis
+* TOC
+{:toc}
 Wird noch ergänzt.
 
 ## Aktuelles
