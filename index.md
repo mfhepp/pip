@@ -11,12 +11,12 @@ Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python" vo
 Für Ihr Studium stehen Ihnen folgende Quellen zur Verfügung:
 * Vorlesung, im aktuellen Trimester in Form von Videos
 * Alle Inhalte der Vorlesung in verschiedenen Formaten:
-** Folien als PDF und HTML (zur Betrachtung im Web-Browser)
-** Skript zur Betrachtung im Browser
+    * Folien als PDF und HTML (zur Betrachtung im Web-Browser)
+    * Skript zur Betrachtung im Browser
 ** Skript als Datei zur Bearbeitung in Jupyter Notebook
 * Übungsaufgaben und Kontrollfragen in verschieden Formaten
-** zur Betrachtung im Browser
-** als Datei zur Bearbeitung in Jupyter Notebook
+    * zur Betrachtung im Browser
+    * als Datei zur Bearbeitung in Jupyter Notebook
 * Buchempfehlungen
 * Lösungsskizzen zu Kontrollfragen
 * Ergänzende Literaturangaben, wenn möglich mit einem Link direkt zum Dokument (funktioniert nur innerhalb des Uninetzes)
