@@ -7,7 +7,7 @@ Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python" vo
 
 ## Organisatorische Hinweise
 
-### Überblick über Materialien zu dieser Veranstaltung 
+**Überblick über Materialien zu dieser Veranstaltung**
 Für Ihr Studium stehen Ihnen folgende Quellen zur Verfügung:
 * Vorlesung, im aktuellen Trimester in Form von Videos
 * Alle Inhalte der Vorlesung in verschiedenen Formaten:
@@ -22,19 +22,19 @@ Für Ihr Studium stehen Ihnen folgende Quellen zur Verfügung:
 * Ergänzende Literaturangaben, wenn möglich mit einem Link direkt zum Dokument (funktioniert nur innerhalb des Uninetzes)
 * Diskussionsforum in ILIAS (nur für Studierende an der UniBwM)
 
-### Erforderliche Software 
+**Erforderliche Software**
 Für die Teilnahme ist es erforderlich, die Programmierumgebung Anaconda bzw. Jupyter Notebooks auf einem eigenen Rechner zu installieren und diesen in die Veranstaltung mitzunehmen.
 * [Download-Link für die Programmierumgebung Anaconda](https://www.anaconda.com/download/)
 Wenn Sie statt eines Laptops mit Windows, Apple OSX oder Linux ein Tablet mit dem Betriebssystem IOS nutzen möchten, gibt es alternativ eine (allerdings kostenpflichtige) App "Juno for Jupyter Notebook":
 * [Juno for Jupyter Notebook im App Store](https://apps.apple.com/app/id1462586500)
 
-### Veranstaltung 
+**Veranstaltung** 
 Die Veranstaltung ist eine kombinierte Vorlesung und Übung. Wegen der anhalten Pandemie werden die Inhalte im laufenden Trimester in Form von Lehr-/Lernvideos und Materialien zum Download angeboten. Sie können diese nach eigenem Zeitplan bearbeiten.
 
-### Ausnahmen 
+**Ausnahmen** 
 Momentan sind keine Ausnahmen bekannt.
 
-### Leistungsnachweis 
+**Leistungsnachweis**
 Die Inhalte der Veranstaltung werden in der Modulprüfung zum Modul 12559  ("Einführung in die Wirtschaftswissenschaften") geprüft. Dabei handelt es sich um eine gemeinsame Prüfung für das gesamte Modul, die in drei schriftliche, aber unselbständige Teilprüfungen gegliedert ist. Dabei bilden "Grundzüge der Wirtschaftsinformatik" und "Programmierung in Python" zusammen eine Teilprüfung.
 
 Der Klausurtermin wird vom Prüfungsamt WOW festgesetzt und rechtzeitig offiziell bekanntgegeben. 
@@ -44,13 +44,13 @@ Eine **Anmeldung zur Klausur** für das Modul **über das Prüfungsamt ist zwing
 ## Beschreibung
 Die offizielle Beschreibung zur Veranstaltung findet sich im jeweils gültigen Modulhandbuch. Alle Modulhandbücher für den Studiengang Wirtschafts- und Organisationswissenschaften finden Sie unter https://www.unibw.de/wow/dateien-wow-allgemein.
 
-### Inhalt der Veranstaltung
+**Inhalt der Veranstaltung**
 In dieser Veranstaltung erlernen die Studierenden die theoretischen Grundlagen und praktischen Fähigkeiten, um mit Hilfe der Programmiersprache Python Daten in wirtschaftswissenschaftlichen Aufgabenstellungen zu analysieren und zu visualisieren.
 
-### Qualifikationsziel 
+**Qualifikationsziel**
 Nach dem Besuch dieser Veranstaltung sind Studierende in der Lage, die Grundkonzepte der Programmierung mit Hilfe der Programmiersprache Python zur Lösung betrieblicher Aufgabenstellungen anzuwenden. Zentral ist dabei die Fähigkeit, die Anforderungen an die interne Abbildung von Information zu verstehen sowie eigenständig in algorithmische Lösungsverfahren für Aufgabenstellungen zu formulieren.
 
-### Voraussetzungen 
+**Voraussetzungen**
 Die Veranstaltung setzt keine über die allgemeine Hochschulreife hinausgehenden Vorkenntnisse voraus.
 
 ## Gliederung 
@@ -64,7 +64,7 @@ Die Veranstaltung setzt keine über die allgemeine Hochschulreife hinausgehenden
 
 ## Literatur ##
 
-### Lehrbücher 
+**Lehrbücher**
 * [Gru15]([http://shop.oreilly.com/product/0636920033400.do)]: Joel Grus: ''[Data Science from Scratch. First Principles with Python](http://shop.oreilly.com/product/0636920033400.do),'' O'Reilly Media, 2015.
 ** Programmierbeispiele zu diesem Buch: https://github.com/joelgrus/data-science-from-scratch
 * [Har18]([https://www.amazon.de/Data-Science-Scratch-Comprehensive-principles-ebook/dp/B07CW2QH9J/)]: Scott Harvey: ''[Data Science from Scratch: Comprehensive guide with essential principles of Data Science](https://www.amazon.de/Data-Science-Scratch-Comprehensive-principles-ebook/dp/B07CW2QH9J/)'', CreateSpace Independent Publishing Platform, 2018.
