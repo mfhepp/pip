@@ -176,9 +176,13 @@ Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Not
 ## Kontakt ##
 
 **Professur für Web Science und Digitalisierung WOW3.5**
+
 **Univ.-Prof. Dr. Martin Hepp**
+
 Universität der Bundeswehr
+
 Werner-Heisenberg-Weg 39
+
 D-85579 Neubiberg, Germany
 
 **Email:** martin.hepp@unibw.de
