@@ -1,4 +1,4 @@
-# Programming in Python Course Materials
+# Programmierung in Python
 
 ## Dependencies and Installation
 The materials are intended to be run from Jupyter Notebooks within the Anaconda package.
@@ -29,8 +29,10 @@ First make sure that the Table of Contents (2), Split Columns and RISE checkboxe
 `Edit -> nbextensions config`
 
 ### Presentation Mode
-In order to present the slides, simply click on the RISE icon (tiny barchart) inm Jupyter Notebooks.
+In order to present the slides, simply click on the RISE icon (tiny barchart) in Jupyter Notebooks.
 Set your browser to full-screen mode.
+
+Hint: The exact rendering depends on the resolution of your screen, so if you are presenting using different projectors or computers, the layout may change. I am still searching for a solution for this.
 
 ### Generate PDFs
 First, you need to fetch the session ID for you running Jupyer Notebooks process. This can be found in the terminal window in which it is running. Find this section:<br />
@@ -91,5 +93,5 @@ I currently use the following settings for `rise` and `toc`in the notebook's met
 - I would like to have the headline numbering for subsequent notebooks start at 2, 3, 4 ... respectively - is there a way to set this?
 - When generating PDFs with `decktape`, there are a few errors regarding missing includes / 404s; what is the effect and how to solve this?
 - I would like to have all fragments of a slide appear on a single PDF page, but RISE/decktape do not seem to pass the respective URI parameter.
-- I need a mechanism to hide solutions from the tutorial in at least an HTML or PDF version, ideally managed via a generic tag or cell meta-data. The two available extensions for only in the ipynb view, neither in HTML export nor PDF.
+- I need a mechanism to hide solutions from the tutorial in at least an HTML or PDF version, ideally managed via a generic tag or cell meta-data. The two available extensions work only in the ipynb view, neither in HTML export nor PDF.
 - The font size varies with output resolution. This is a nuissance.
