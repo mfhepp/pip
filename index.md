@@ -79,7 +79,7 @@ Die Veranstaltung setzt keine über die allgemeine Hochschulreife hinausgehenden
 
 **Lehrbücher**
 * [Gru15]([http://shop.oreilly.com/product/0636920033400.do)]: Joel Grus: ''[Data Science from Scratch. First Principles with Python](http://shop.oreilly.com/product/0636920033400.do),'' O'Reilly Media, 2015.
-** Programmierbeispiele zu diesem Buch: https://github.com/joelgrus/data-science-from-scratch
+    * Programmierbeispiele zu diesem Buch: https://github.com/joelgrus/data-science-from-scratch
 * [Har18]([https://www.amazon.de/Data-Science-Scratch-Comprehensive-principles-ebook/dp/B07CW2QH9J/)]: Scott Harvey: ''[Data Science from Scratch: Comprehensive guide with essential principles of Data Science](https://www.amazon.de/Data-Science-Scratch-Comprehensive-principles-ebook/dp/B07CW2QH9J/)'', CreateSpace Independent Publishing Platform, 2018.
 
 ## Materialien für die Programmierung in Python 
