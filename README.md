@@ -1,5 +1,13 @@
 # Programmierung in Python
 
+Auf dieser Seite finden Sie die Quellen zur Veranstaltung "Programmierung in Python" von Prof. Dr. Martin Hepp an der Universität der Bundeswehr München.
+
+Der Kurs ist über https://mfhepp.github.io/pip/ zugänglich.
+
+Diese Seite ist nur für Entwickler oder Personen gedacht, die den Kurs lokal installieren oder verändern möchten.
+
+# Overview
+
 ## Dependencies and Installation
 The materials are intended to be run from Jupyter Notebooks within the Anaconda package.
 
@@ -32,7 +40,7 @@ First make sure that the Table of Contents (2), Split Columns and RISE checkboxe
 In order to present the slides, simply click on the RISE icon (tiny barchart) in Jupyter Notebooks.
 Set your browser to full-screen mode.
 
-Hint: The exact rendering depends on the resolution of your screen, so if you are presenting using different projectors or computers, the layout may change. I am still searching for a solution for this.
+**Hint:** The exact rendering depends on the resolution of your screen, so if you are presenting using different projectors or computers, the layout may change. I am still searching for a solution for this.
 
 ### Generate PDFs
 First, you need to fetch the session ID for you running Jupyer Notebooks process. This can be found in the terminal window in which it is running. Find this section:<br />
@@ -88,7 +96,7 @@ I currently use the following settings for `rise` and `toc`in the notebook's met
 ## Open Issues ##
 - The slide numbers do not show in the PDF version of the slides.
 - I am still looking for a way to generate HTML-only versions of the presentations that preserve the reveal.js features. The standard output with `jupyter-nbconvert` or the respective menu option in Jupyter notebook is incomplete and breaks over some markup for reveal.js.
-- I would like to include the date of creation as a version signature to the footer of PDF versions, but I have not yet figured out how. Using an f-String as the value for the `"rise: {"header": ...} value might work, but where will I put the datetime import?
+- I would like to include the date of creation as a version signature to the footer of PDF versions, but I have not yet figured out how. Using an f-String as the value for the `"rise: {"header": ...}` value might work, but where will I put the datetime import?
 - Need a way to generate an HTML version of the notebook that includes the numbering from the ToC extension, but not the ToC (or the ToC in the first cell).
 - I would like to have the headline numbering for subsequent notebooks start at 2, 3, 4 ... respectively - is there a way to set this?
 - When generating PDFs with `decktape`, there are a few errors regarding missing includes / 404s; what is the effect and how to solve this?
