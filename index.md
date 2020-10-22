@@ -1,6 +1,6 @@
 # Programmierung in Python
 
-Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python" von Prof. Dr. Martin Hepp an der Universität der Bundeswehr München.
+Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python"\ von Prof. Dr. Martin Hepp an der Universität der Bundeswehr München.
 
 Die Materialien sind auch für die Allgemeinheit gedacht.
 
@@ -102,7 +102,9 @@ Dabei werden alle VIER Formen automatisch aus denselben Dateien erzeugt. Sie ben
 
 Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Notebook (Dateiendung \*.ipynb) herunterladen und in das Verzeichnis verschieben, in dem sich Ihre Jupyter-Dateien befinden.
 
-Profis können auch den gesamten Kurs per `git clone https://github.com/mfhepp/pip.git` herunterladen.
+Profis können auch den gesamten Kurs per\
+`git clone https://github.com/mfhepp/pip.git`\
+herunterladen.
 
 ### Einheit 0: Grundlagen der Programmierung
 * **Folien:** [PDF](https://mfhepp.github.io/pip/slides/pip0.pdf)
