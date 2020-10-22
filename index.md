@@ -36,7 +36,7 @@ Wählen Sie die Variante **"[64-Bit Graphical Installer](https://www.anaconda.co
 Wenn Sie statt eines Laptops mit Windows, Apple OSX oder Linux ein Tablet mit dem Betriebssystem IOS nutzen möchten, gibt es alternativ eine (allerdings kostenpflichtige) App "Juno for Jupyter Notebook":
 * [Juno for Jupyter Notebook im App Store](https://apps.apple.com/app/id1462586500)
 
-**Veranstaltung**
+## Veranstaltung
 
 Die Veranstaltung ist eine kombinierte Vorlesung und Übung. Wegen der anhaltenden Pandemie werden die Inhalte im laufenden Trimester in Form von Lehr-/Lernvideos und Materialien zum Download angeboten. Sie können diese nach eigenem Zeitplan bearbeiten.
 
