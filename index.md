@@ -1,9 +1,11 @@
 # Programmierung in Python
 
-Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python" von Prof. Dr. Martin Hepp an der Universität der Bundeswehr München. Die Materialien sind auch für die Allgemeinheit gedacht.
+Dies ist die offizielle Webseite zur Veranstaltung "Programmierung in Python" von Prof. Dr. Martin Hepp an der Universität der Bundeswehr München.
+
+Die Materialien sind auch für die Allgemeinheit gedacht.
 
 ## Aktuelles
-* 2020-10-15: Aktualisierte Fassung verfügbar
+* 2020-10-22: Aktualisierte Fassung verfügbar
 
 ## Organisatorische Hinweise
 
@@ -25,17 +27,20 @@ Für Ihr Studium stehen Ihnen folgende Quellen zur Verfügung:
 **Erforderliche Software**
 Für die Teilnahme ist es erforderlich, die Programmierumgebung Anaconda bzw. Jupyter Notebooks auf einem eigenen Rechner zu installieren und diesen in die Veranstaltung mitzunehmen.
 * [Download-Link für die Programmierumgebung Anaconda](https://www.anaconda.com/download/)
+
+Wählen Sie die Variante **"[64-Bit Graphical Installer](https://www.anaconda.com/products/individual#Downloads)".**
+
 Wenn Sie statt eines Laptops mit Windows, Apple OSX oder Linux ein Tablet mit dem Betriebssystem IOS nutzen möchten, gibt es alternativ eine (allerdings kostenpflichtige) App "Juno for Jupyter Notebook":
 * [Juno for Jupyter Notebook im App Store](https://apps.apple.com/app/id1462586500)
 
 **Veranstaltung** 
-Die Veranstaltung ist eine kombinierte Vorlesung und Übung. Wegen der anhalten Pandemie werden die Inhalte im laufenden Trimester in Form von Lehr-/Lernvideos und Materialien zum Download angeboten. Sie können diese nach eigenem Zeitplan bearbeiten.
+Die Veranstaltung ist eine kombinierte Vorlesung und Übung. Wegen der anhaltenden Pandemie werden die Inhalte im laufenden Trimester in Form von Lehr-/Lernvideos und Materialien zum Download angeboten. Sie können diese nach eigenem Zeitplan bearbeiten.
 
 **Ausnahmen** 
 Momentan sind keine Ausnahmen bekannt.
 
 **Leistungsnachweis**
-Die Inhalte der Veranstaltung werden in der Modulprüfung zum Modul 12559  ("Einführung in die Wirtschaftswissenschaften") geprüft. Dabei handelt es sich um eine gemeinsame Prüfung für das gesamte Modul, die in drei schriftliche, aber unselbständige Teilprüfungen gegliedert ist. Dabei bilden "Grundzüge der Wirtschaftsinformatik" und "Programmierung in Python" zusammen eine Teilprüfung.
+Die Inhalte der Veranstaltung werden in der Modulprüfung zum Modul 12559 ("Einführung in die Wirtschaftswissenschaften") geprüft. Dabei handelt es sich um eine gemeinsame Prüfung für das gesamte Modul, die in drei schriftliche, aber unselbständige Teilprüfungen gegliedert ist. Dabei bilden "Grundzüge der Wirtschaftsinformatik" und "Programmierung in Python" zusammen eine Teilprüfung.
 
 Der Klausurtermin wird vom Prüfungsamt WOW festgesetzt und rechtzeitig offiziell bekanntgegeben. 
 
@@ -48,7 +53,7 @@ Die offizielle Beschreibung zur Veranstaltung findet sich im jeweils gültigen M
 In dieser Veranstaltung erlernen die Studierenden die theoretischen Grundlagen und praktischen Fähigkeiten, um mit Hilfe der Programmiersprache Python Daten in wirtschaftswissenschaftlichen Aufgabenstellungen zu analysieren und zu visualisieren.
 
 **Qualifikationsziel**
-Nach dem Besuch dieser Veranstaltung sind Studierende in der Lage, die Grundkonzepte der Programmierung mit Hilfe der Programmiersprache Python zur Lösung betrieblicher Aufgabenstellungen anzuwenden. Zentral ist dabei die Fähigkeit, die Anforderungen an die interne Abbildung von Information zu verstehen sowie eigenständig in algorithmische Lösungsverfahren für Aufgabenstellungen zu formulieren.
+Nach dem Besuch dieser Veranstaltung sind Studierende in der Lage, die Grundkonzepte der Programmierung mit Hilfe der Programmiersprache Python zur Lösung betrieblicher Aufgabenstellungen anzuwenden. Zentral ist dabei die Fähigkeit, die Anforderungen an die interne Abbildung von Information zu verstehen sowie eigenständig algorithmische Lösungsverfahren für Aufgabenstellungen zu entwerfen.
 
 **Voraussetzungen**
 Die Veranstaltung setzt keine über die allgemeine Hochschulreife hinausgehenden Vorkenntnisse voraus.
@@ -70,15 +75,14 @@ Die Veranstaltung setzt keine über die allgemeine Hochschulreife hinausgehenden
 * [Har18]([https://www.amazon.de/Data-Science-Scratch-Comprehensive-principles-ebook/dp/B07CW2QH9J/)]: Scott Harvey: ''[Data Science from Scratch: Comprehensive guide with essential principles of Data Science](https://www.amazon.de/Data-Science-Scratch-Comprehensive-principles-ebook/dp/B07CW2QH9J/)'', CreateSpace Independent Publishing Platform, 2018.
 
 ## Materialien für die Programmierung in Python 
-* [Download-Link für die Programmierumgebung Anaconda](https://www.anaconda.com/download/) **aktualisiert**
+* [Download-Link für die Programmierumgebung Anaconda](https://www.anaconda.com/download/)
 * [Python-Kurs von Google](https://developers.google.com/edu/python) (engl.)
-* [The IPython Notebook](http://ipython.org/notebook.html)
+* [Jupyter Notebook](https://jupyter.org/)
 
 ## Weitere Ressourcen 
-* [Google Styleguide for Python](http://google.github.io/styleguide/pyguide.html)
+* [Google Styleguide for Python](https://google.github.io/styleguide/pyguide.html)
 
 ## Studienmaterialien
-
 Sie können die Unterlagen, die im Vorlesungsteil der Veranstaltung gezeigt werden, jeweils in vier verschiedenen Formen nutzen:
 
 * als HTML-Datei im Web-Browser,
@@ -86,9 +90,9 @@ Sie können die Unterlagen, die im Vorlesungsteil der Veranstaltung gezeigt werd
 * als PDF-Version der Präsentation sowie
 * als HTML-Version der Präsentation.
 
-Dabei werden alle VIER Formen automatisch aus denselben Dateien erzeugt. Sie benötigen also nur *EINE* Form. Falls Sie die Unterlagen ausdrucken möchten, ist dazu die HTML-Datei (nicht die HTML-Version der Folien) am besten geeignet, weil sie wie ein Skript formattiert ist und am wenigsten Papier benötigt. 
+Dabei werden alle VIER Formen automatisch aus denselben Dateien erzeugt. Sie benötigen also nur **EINE** Form. Falls Sie die Unterlagen ausdrucken möchten, ist dazu die HTML-Datei (nicht die HTML-Version der Folien) am besten geeignet, weil sie wie ein Skript formattiert ist und am wenigsten Papier benötigt. 
 
-Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Notebook (Dateiendung \*.ipynb) herunterladen und in das Verzeichnis verschieben, in dem sich Ihre Jupyter-Dateien befinden.
+Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Notebook (Dateiendung \*.ipynb) herunterladen und in das Verzeichnis verschieben, in dem sich Ihre Jupyter-Dateien befinden. (Profis können auch den gesamten Kurs per `git clone https://github.com/mfhepp/pip.git` herunterladen.)
 
 ### Einheit 0: Grundlagen der Programmierung
 * **Folien:** [PDF](https://mfhepp.github.io/pip/slides/pip0.pdf)
