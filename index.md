@@ -10,21 +10,23 @@ Die Materialien sind auch für die Allgemeinheit gedacht.
 ## Organisatorische Hinweise
 
 **Überblick über Materialien zu dieser Veranstaltung**
+
 Für Ihr Studium stehen Ihnen folgende Quellen zur Verfügung:
-* Vorlesung, im aktuellen Trimester in Form von Videos
+* **Vorlesung,** im aktuellen Trimester in Form von Videos
 * Alle Inhalte der Vorlesung in verschiedenen Formaten:
-    * Folien als PDF und HTML (zur Betrachtung im Web-Browser)
-    * Skript zur Betrachtung im Browser
-** Skript als Datei zur Bearbeitung in Jupyter Notebook
-* Übungsaufgaben und Kontrollfragen in verschieden Formaten
+    * **Folien als PDF und HTML** (zur Betrachtung im Web-Browser)
+    * **Skript** zur Betrachtung im Browser
+    * **Skript** als Datei zur Bearbeitung in Jupyter Notebook
+* **Übungsaufgaben und Kontrollfragen** in verschieden Formaten
     * zur Betrachtung im Browser
     * als Datei zur Bearbeitung in Jupyter Notebook
 * Buchempfehlungen
-* Lösungsskizzen zu Kontrollfragen
-* Ergänzende Literaturangaben, wenn möglich mit einem Link direkt zum Dokument (funktioniert nur innerhalb des Uninetzes)
-* Diskussionsforum in ILIAS (nur für Studierende an der UniBwM)
+* **Lösungsskizzen** zu Kontrollfragen
+* Ergänzende **Literaturangaben,** wenn möglich mit einem Link direkt zum Dokument (einige funktionieren nur innerhalb des Netzwerks einer Universität oder per [VPN](https://de.wikipedia.org/wiki/Virtual_Private_Network))
+* Diskussionsforum in [ILIAS](https://ilias.unibw.de/) (nur für Studierende an der UniBwM)
 
 **Erforderliche Software**
+
 Für die Teilnahme ist es erforderlich, die Programmierumgebung Anaconda bzw. Jupyter Notebooks auf einem eigenen Rechner zu installieren und diesen in die Veranstaltung mitzunehmen.
 * [Download-Link für die Programmierumgebung Anaconda](https://www.anaconda.com/download/)
 
@@ -33,13 +35,16 @@ Wählen Sie die Variante **"[64-Bit Graphical Installer](https://www.anaconda.co
 Wenn Sie statt eines Laptops mit Windows, Apple OSX oder Linux ein Tablet mit dem Betriebssystem IOS nutzen möchten, gibt es alternativ eine (allerdings kostenpflichtige) App "Juno for Jupyter Notebook":
 * [Juno for Jupyter Notebook im App Store](https://apps.apple.com/app/id1462586500)
 
-**Veranstaltung** 
+**Veranstaltung**
+
 Die Veranstaltung ist eine kombinierte Vorlesung und Übung. Wegen der anhaltenden Pandemie werden die Inhalte im laufenden Trimester in Form von Lehr-/Lernvideos und Materialien zum Download angeboten. Sie können diese nach eigenem Zeitplan bearbeiten.
 
-**Ausnahmen** 
+**Ausnahmen**
+
 Momentan sind keine Ausnahmen bekannt.
 
 **Leistungsnachweis**
+
 Die Inhalte der Veranstaltung werden in der Modulprüfung zum Modul 12559 ("Einführung in die Wirtschaftswissenschaften") geprüft. Dabei handelt es sich um eine gemeinsame Prüfung für das gesamte Modul, die in drei schriftliche, aber unselbständige Teilprüfungen gegliedert ist. Dabei bilden "Grundzüge der Wirtschaftsinformatik" und "Programmierung in Python" zusammen eine Teilprüfung.
 
 Der Klausurtermin wird vom Prüfungsamt WOW festgesetzt und rechtzeitig offiziell bekanntgegeben. 
@@ -50,12 +55,15 @@ Eine **Anmeldung zur Klausur** für das Modul **über das Prüfungsamt ist zwing
 Die offizielle Beschreibung zur Veranstaltung findet sich im jeweils gültigen Modulhandbuch. Alle Modulhandbücher für den Studiengang Wirtschafts- und Organisationswissenschaften finden Sie unter https://www.unibw.de/wow/dateien-wow-allgemein.
 
 **Inhalt der Veranstaltung**
+
 In dieser Veranstaltung erlernen die Studierenden die theoretischen Grundlagen und praktischen Fähigkeiten, um mit Hilfe der Programmiersprache Python Daten in wirtschaftswissenschaftlichen Aufgabenstellungen zu analysieren und zu visualisieren.
 
 **Qualifikationsziel**
+
 Nach dem Besuch dieser Veranstaltung sind Studierende in der Lage, die Grundkonzepte der Programmierung mit Hilfe der Programmiersprache Python zur Lösung betrieblicher Aufgabenstellungen anzuwenden. Zentral ist dabei die Fähigkeit, die Anforderungen an die interne Abbildung von Information zu verstehen sowie eigenständig algorithmische Lösungsverfahren für Aufgabenstellungen zu entwerfen.
 
 **Voraussetzungen**
+
 Die Veranstaltung setzt keine über die allgemeine Hochschulreife hinausgehenden Vorkenntnisse voraus.
 
 ## Gliederung 
@@ -92,7 +100,9 @@ Sie können die Unterlagen, die im Vorlesungsteil der Veranstaltung gezeigt werd
 
 Dabei werden alle VIER Formen automatisch aus denselben Dateien erzeugt. Sie benötigen also nur **EINE** Form. Falls Sie die Unterlagen ausdrucken möchten, ist dazu die HTML-Datei (nicht die HTML-Version der Folien) am besten geeignet, weil sie wie ein Skript formattiert ist und am wenigsten Papier benötigt. 
 
-Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Notebook (Dateiendung \*.ipynb) herunterladen und in das Verzeichnis verschieben, in dem sich Ihre Jupyter-Dateien befinden. (Profis können auch den gesamten Kurs per `git clone https://github.com/mfhepp/pip.git` herunterladen.)
+Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Notebook (Dateiendung \*.ipynb) herunterladen und in das Verzeichnis verschieben, in dem sich Ihre Jupyter-Dateien befinden.
+
+Profis können auch den gesamten Kurs per `git clone https://github.com/mfhepp/pip.git` herunterladen.
 
 ### Einheit 0: Grundlagen der Programmierung
 * **Folien:** [PDF](https://mfhepp.github.io/pip/slides/pip0.pdf)
@@ -168,7 +178,7 @@ Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Not
 * **Aufgaben zu dieser Einheit**
     * Wiederholen Sie die Vorlesungsfolien.
 
-### Einheit 6: Repetitorium zur Klausur und Anwendungsbeispiele 
+### Einheit 6: Repetitorium zur Klausur 
 * **Übungen als Jupyter Notebook:**
     * [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/pip_unit_6.html)
     * [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/pip_unit_6.ipynb)
@@ -179,15 +189,11 @@ Für den Lernerfolg am besten ist es, wenn Sie jeweils die Datei als Jupyter Not
 
 ## Kontakt ##
 
-**Professur für Web Science und Digitalisierung WOW3.5**
+**Professur für Web Science und Digitalisierung WOW3.5**\
+**Univ.-Prof. Dr. Martin Hepp**\
+Universität der Bundeswehr\
+Werner-Heisenberg-Weg 39\
+**D-85579 Neubiberg, Germany**\
 
-**Univ.-Prof. Dr. Martin Hepp**
-
-Universität der Bundeswehr
-
-Werner-Heisenberg-Weg 39
-
-D-85579 Neubiberg, Germany
-
-**Email:** martin.hepp@unibw.de
-**Telefon:** +49 89 6004-4217
+**Email:** martin.hepp@unibw.de\
+**Telefon:** +49 89 6004-4217\
