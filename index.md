@@ -193,7 +193,9 @@ Profis können auch den gesamten Kurs per `git clone https://github.com/mfhepp/p
 **Univ.-Prof. Dr. Martin Hepp**\
 Universität der Bundeswehr\
 Werner-Heisenberg-Weg 39\
-**D-85579 Neubiberg, Germany**\
+**D-85579 Neubiberg, Germany**
 
 **Email:** martin.hepp@unibw.de\
-**Telefon:** +49 89 6004-4217\
+**Telefon:** +49 89 6004-4217
+
+## EOF
