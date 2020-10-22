@@ -40,6 +40,9 @@ Wenn Sie statt eines Laptops mit Windows, Apple OSX oder Linux ein Tablet mit de
 
 Die Veranstaltung ist eine kombinierte Vorlesung und Übung. Wegen der anhaltenden Pandemie werden die Inhalte im laufenden Trimester in Form von Lehr-/Lernvideos und Materialien zum Download angeboten. Sie können diese nach eigenem Zeitplan bearbeiten.
 
+Die Videos erreichen Studierende der UniBwM über das System ILIAS unter
+* [https://ilias.unibw.de/goto.php?target=crs_262959&client_id=unibwm](https://ilias.unibw.de/goto.php?target=crs_262959&client_id=unibwm)
+
 **Ausnahmen**
 
 Momentan sind keine Ausnahmen bekannt.
