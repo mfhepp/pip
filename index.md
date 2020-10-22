@@ -118,11 +118,11 @@ herunterladen.
     * [als HTML](https://mfhepp.github.io/pip/slides/pip1.html)
 * **Übung**
     * **Einfache Datentypen**
-    ** [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/uebungen_1a.html)
-    ** [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/uebungen_1a.ipynb)
+        * [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/uebungen_1a.html)
+        * [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/uebungen_1a.ipynb)
     * **Komplexe Datentypen**
-    ** [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/uebungen_1b.html)
-    ** [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/uebungen_1b.ipynb)
+        * [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/uebungen_1b.html)
+        * [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/uebungen_1b.ipynb)
     * **Hinweis:** Bearbeiten Sie in Ihrem eigenen Interesse zunächst die Aufgaben, bevor Sie die Lösungen zu Rate ziehen!
 * **Aufgaben zu dieser Einheit**
     * Wiederholen Sie die Vorlesungsfolien.
@@ -135,8 +135,8 @@ herunterladen.
     * [als PDF](https://mfhepp.github.io/pip/slides/pip2.pdf)
     * [als HTML](https://mfhepp.github.io/pip/slides/pip2.html)
 * **Übung**
-    ** [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/uebungen_2.html)
-    ** [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/uebungen_2.ipynb)
+    * [zur Betrachtung im Browser](https://mfhepp.github.io/pip/notebooks/uebungen_2.html)
+    * [als Datei zur Bearbeitung in Jupyter Notebook](https://mfhepp.github.io/pip/notebooks/uebungen_2.ipynb)
     * **Hinweis:** Bearbeiten Sie in Ihrem eigenen Interesse zunächst die Aufgaben, bevor Sie die Lösungen zu Rate ziehen.
 * **Aufgaben zu dieser Einheit**
     * Wiederholen Sie die Vorlesungsfolien.
