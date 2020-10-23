@@ -93,7 +93,7 @@ I currently use the following settings for `rise` and `toc`in the notebook's met
   }
 ```
 
-## Open Issues ##
+## Open Issues
 - The slide numbers do not show in the PDF version of the slides.
 - I am still looking for a way to generate HTML-only versions of the presentations that preserve the reveal.js features. The standard output with `jupyter-nbconvert` or the respective menu option in Jupyter notebook is incomplete and breaks over some markup for reveal.js.
 - I would like to include the date of creation as a version signature to the footer of PDF versions, but I have not yet figured out how. Using an f-String as the value for the `"rise: {"header": ...}` value might work, but where will I put the datetime import?
@@ -103,3 +103,7 @@ I currently use the following settings for `rise` and `toc`in the notebook's met
 - I would like to have all fragments of a slide appear on a single PDF page, but RISE/decktape do not seem to pass the respective URI parameter.
 - I need a mechanism to hide solutions from the tutorial in at least an HTML or PDF version, ideally managed via a generic tag or cell meta-data. The two available extensions work only in the ipynb view, neither in HTML export nor PDF.
 - The font size varies with output resolution. This is a nuissance.
+
+
+## Acknowledgements ##
+This course and my entire workflow for development-centric presentation materials is based on the great **[RISE extension](https://rise.readthedocs.io/en/stable/index.html)** by @damianavila, and **[DeckTape](https://github.com/astefanutti/decktape)** by @astefanutti. Thanks!
