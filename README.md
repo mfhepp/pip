@@ -106,4 +106,4 @@ I currently use the following settings for `rise` and `toc`in the notebook's met
 
 
 ## Acknowledgements ##
-This course and my entire workflow for development-centric presentation materials is based on the great **[RISE extension](https://rise.readthedocs.io/en/stable/index.html)** by @damianavila, and **[DeckTape](https://github.com/astefanutti/decktape)** by @astefanutti. Thanks!
+This course and my entire workflow for development-centric presentation materials is based on the great **[RISE extension](https://rise.readthedocs.io/en/stable/index.html)** by [@damianavila](https://github.com/damianavila), and **[DeckTape](https://github.com/astefanutti/decktape)** by [@astefanutti](https://github.com/astefanutti). Thanks!
